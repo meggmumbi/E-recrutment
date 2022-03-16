@@ -1,0 +1,238 @@
+﻿
+@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "ProffessionalQualifications";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int ProffessionalQualificationsCounter = 0;
+}
+
+    <div class="card">
+    <div class="card-header text-center" data-background-color="darkgreen">
+        <h5 class="title"><i><strong>Proffessional Qualifications</strong></i></h5>
+    </div>
+</div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Proffessional Qualifications<div class="pull-right"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <div id="proffessionalfeedback" style="display: none" data-dismiss="alert"></div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Proffessional Qualifications<span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="proqualifications" name="proqualifications">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Institution <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="professionaltxtinstitution" name="professionaltxtinstitution">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Country <span class="text-danger">*</span></label>
+                        @Html.Action("ProfessionalQualificationCountries", "Home")
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Qualification Title <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="proqualificationTitle" name="proqualificationTitle">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Speciality <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="progtxtspeciality" name="progtxtspeciality">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Attained Score <span class="text-danger">*</span></label>
+                        <select data-live-search="true" class="form-control input-circle select2" id="progattainedscore" name="progattainedscore">
+                            <option value="">--Choose Attained Score--</option>
+                            <option value="4">Destinction</option>
+                            <option value="5">Pass</option>
+                            <option value="6">Credit</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Completion Year <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="progcompletionyear" name="progcompletionyear">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Start Date <span class="text-danger">*</span></label>
+                        <div class="cal-icon"><input class="form-control datetimepicker" style="" type="text" id="progstartdate" name="progstartdate"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">End Date <span class="text-danger">*</span></label>
+                        <div class="cal-icon"><input class="form-control datetimepicker" style="" type="text" id="progenddate" name="progenddate"></div>
+                    </div>
+                </div>
+
+                <ul class="list-inline pull-right">
+                    <li>
+                        <button class="btn btn-primary pull-right ladda-button  btn_proffessionalQualifications" id="btn_proffessionalQualifications" name="btn_proffessionalQualifications" type="submit" data-style="slide-right" data-background-color="darkgreen">
+                            <span class="ladda-label">
+                                Save Professional Qualifications
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <div class="panel-body">
+                                <table class="table table-bordered table-striped datatable" id="tbl_applicant_ProffessionalQualifications">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Entry No</th>
+                                            <th>Qualification</th>
+                                            <th>Institution</th>
+                                            <th>Country</th>
+                                            <th>Completion Year</th>
+                                            <th>Speciality</th>
+                                            <th>Attained Score</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (ProffessionalQualificationModel academic in Model.ProffessionalQualification)
+                                        {
+                                            ProffessionalQualificationsCounter++;
+                                            <tr>
+                                                <td>
+                                                    @ProffessionalQualificationsCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.EntryNo)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.ProffessionalQualification)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.Institution)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.Country)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.CompletionYear)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.Speciality)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.AttainedScore)
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-success" onclick="EditProffessionalQualifications('@academic.ProffessionalQualification','@academic.Institution','@academic.CompletionYear','@academic.Speciality','@academic.AttainedScore')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger" onclick="DeleteProffessionalQualifications('@Url.Action("DeleteProffesionalQualificationDetails", "Home", new { EntryNumber = @academic.EntryNo })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+ <div id="edit_professionalQualifications" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-content modal-lg" style="width:96%">
+            <div class="modal-header">
+                <center><h4 class="modal-title">Update Proffessional Qualifications</h4></center>
+            </div>
+            <div class="modal-body">
+                <form class="m-b-30">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Proffessional Qualifications<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editproqualifications" name="editproqualifications">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Institution <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editprofessionaltxtinstitution" name="editprofessionaltxtinstitution">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Country <span class="text-danger">*</span></label>
+                                @Html.Action("ProfessionalQualificationCountries", "Home")
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Qualification Title <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editproqualificationTitle" name="editproqualificationTitle">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Speciality <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editprogtxtspeciality" name="editprogtxtspeciality">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Attained Score <span class="text-danger">*</span></label>
+                                <select data-live-search="true" class="form-control input-circle select2" id="editprogattainedscore" name="editprogattainedscore">
+                                    <option value="">--Choose Attained Score--</option>
+                                    <option value="3">Destinction</option>
+                                    <option value="4">Pass</option>
+                                    <option value="5">Credit</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Completion Year <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editprogcompletionyear" name="editprogcompletionyear">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Start Date <span class="text-danger">*</span></label>
+                                <div class="cal-icon"><input class="form-control datetimepicker" style="" type="text" id="editprogstartdate" name="editprogstartdate"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">End Date <span class="text-danger">*</span></label>
+                                <div class="cal-icon"><input class="form-control datetimepicker" style="" type="text" id="editprogenddate" name="editprogenddate"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

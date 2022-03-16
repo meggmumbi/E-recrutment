@@ -1,0 +1,292 @@
+﻿@model E_Recruitment.Models.ProffessionalQualificationModel
+
+@{
+    ViewBag.Title = "ProfessionalQualifications";
+}
+<div class="panel panel-body">
+    <div class="card">
+        <div class="card-header text-center" data-background-color="darkgreen">
+            <h5 class="title"><i><strong>Candidate Registration</strong></i></h5>
+        </div>
+        <center><h3>Welcome to the E-Recruitment Portal Job Application Form</h3></center>
+        <div class="row form-group">
+            <div class="col-xs-12">
+                <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                    <li class="disabled">
+                        <a href="/JobApplication/Index">
+                            <h4 class="list-group-item-heading">1</h4>
+                            <p class="list-group-item-text">Personal Details</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/JobApplication/AcademicQualifications">
+                            <h4 class="list-group-item-heading">2</h4>
+                            <p class="list-group-item-text">Education</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/JobApplication/ProfessionalQualifications">
+                            <h4 class="list-group-item-heading">3</h4>
+                            <p class="list-group-item-text">Qualifications</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/JobApplication/RegistrationMembership">
+                            <h4 class="list-group-item-heading">4</h4>
+                            <p class="list-group-item-text">Proffessional Bodies</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/JobApplication/EmploymentExperience">
+                            <h4 class="list-group-item-heading">5</h4>
+                            <p class="list-group-item-text">Experience</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/JobApplication/Referees">
+                            <h4 class="list-group-item-heading">6</h4>
+                            <p class="list-group-item-text">Referees</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/JobApplication/CandidateAttachDocuments">
+                            <h4 class="list-group-item-heading">7</h4>
+                            <p class="list-group-item-text">Attachments</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/JobApplication/DeclarationForms">
+                            <h4 class="list-group-item-heading">8</h4>
+                            <p class="list-group-item-text">Declaration</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @using (Html.BeginForm("ProfessionalQualifications", "JobApplication", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Professional Qualifications<div class="pull-right"><i class="fa fa-angle-left"></i>Step 3 of 8<i class="fa fa-angle-right"></i></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @if (TempData["error"] != null)
+                        {
+
+                            <div class="alert alert-danger" id="alert-danger" role="alert">
+                                @TempData["error"]
+                            </div>
+
+                        }
+                        @if (TempData["success"] != null)
+                        {
+
+                            <div class="alert alert-success" id="alert-danger" role="alert">
+                                @TempData["success"]
+                            </div>
+
+                        }
+                        else
+                        {
+
+                        }
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ProffessionalQualification, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ProffessionalQualification, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.ProffessionalQualification, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Institution, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Institution, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.Institution, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.DropDownListFor(model => model.Country, ViewBag.Countries as SelectList, "--Select Country--", new { @class = "form-control select2", @required = "required", id = "business_type" })
+                                    @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.AttainedScore, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.DropDownListFor(model => model.AttainedScore, ViewBag.AttainedScore as SelectList, new { @class = "form-control select2", @required = "required", id = "business_type" })
+                                    @Html.ValidationMessageFor(model => model.AttainedScore, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.CompletionYear, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.CompletionYear, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.CompletionYear, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control floating datetimepicker" } })
+                                    @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.EndDate, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control floating datetimepicker" } })
+                                    @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <center>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <input type="submit" value="Save Professional Qualification Details" class="btn btn-primary  btn-lg ladda-button" />
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <div class="panel-body">
+                                    <table id="tbl_proffessionalqualifications" width="100%" cellspacing="1">
+                                        <thead>
+                                            <tr>
+                                                <th>Qualification</th>
+                                                <th>Institution</th>
+                                                <th>Country</th>
+                                                <th>Completion Year</th>
+                                                <th>Attained Score</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            @Html.ActionLink("Previous", "AcademicQualifications", "JobApplication", null, new { @class = "btn btn-warning ladda-button fa fa-arrow-left" })
+                        </div>
+                        <div class="pull-right">
+                            @Html.ActionLink("Next", "RegistrationMembership", "JobApplication", null, new { @class = "btn btn-success ladda-button fa fa-arrow-right" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+    <div>
+        @Html.ActionLink("Back to Dashbaord", "Dashbaord", "Home", null, new { @class = "btn btn-warning ladda-button fa fa-arrow-lef" })
+    </div>
+
+</div>
+<script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+<script>
+        $(document).ready(function () {
+            var oTable = $('#tbl_proffessionalqualifications').DataTable({
+                "ajax": {
+                    "url": '/JobApplication/GetProffessionalQualification',
+                    "type" : "GET",
+                    "datatype" : "json"
+                },
+                "columns": [
+                    { "data": "ProffessionalQualification", "autoWidth": true },
+                    { "data": "Institution", "autoWidth": true },
+                    { "data": "Country", "autoWidth": true },
+                    { "data": "CompletionYear", "autoWidth": true },
+                     { "data": "AttainedScore", "autoWidth": true },
+                    {
+                        "data": "EntryNo", "width": "50px", "render": function (data) {
+                            return '<a class="btn btn-info" href="/JobApplication/EditProfessionalQualifications/' + data + '"><i class="fa fa-pencil m-r-10">Edit</a>';
+                        }
+                    },
+                    {
+                        "data": "EntryNo", "width": "50px", "render": function (data) {
+                            return '<a class="btn btn-danger" href="/JobApplication/DeleteProffessionalQualifications/' + data + '"><i class="fa fa-trash m-r-10">Delete</a>';
+                        }
+                    }
+                ]
+            })
+            $('.tablecontainer').on('click', 'a.popup', function (e) {
+                e.preventDefault();
+                OpenPopup($(this).attr('href'));
+            })
+            function OpenPopup(pageUrl) {
+                var $pageContent = $('<div/>');
+                $pageContent.load(pageUrl, function () {
+                    $('#popupForm', $pageContent).removeData('validator');
+                    $('#popupForm', $pageContent).removeData('unobtrusiveValidation');
+                    $.validator.unobtrusive.parse('form');
+
+                });
+
+                $dialog = $('<div class="popupWindow" style="overflow:auto"></div>')
+                          .html($pageContent)
+                          .dialog({
+                              draggable : false,
+                              autoOpen : false,
+                              resizable : false,
+                              model : true,
+                              title:'Popup Dialog',
+                              height : 550,
+                              width : 600,
+                              close: function () {
+                                  $dialog.dialog('destroy').remove();
+                              }
+                          })
+
+                $('.popupWindow').on('submit', '#popupForm', function (e) {
+                    var url = $('#popupForm')[0].action;
+                    $.ajax({
+                        type : "POST",
+                        url : url,
+                        data: $('#popupForm').serialize(),
+                        success: function (data) {
+                            if (data.status) {
+                                $dialog.dialog('close');
+                                oTable.ajax.reload();
+                            }
+                        }
+                    })
+
+                    e.preventDefault();
+                })
+                $dialog.dialog('open');
+            }
+        })
+</script>
+
+

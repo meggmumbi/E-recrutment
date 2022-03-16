@@ -1,0 +1,15 @@
+﻿@model IEnumerable<E_Recruitment.Models.EthnicitiesModel>
+
+@{
+    Layout = null;
+}
+<select class="form-control select2" id="txtethnicity" name="txtethnicity" data_live_search="true">
+    <option value="">--Select Ethnic Background--</option>
+    <optgroup label="All Ethnicity List List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Name</option>
+        }
+    </optgroup>
+</select>
+

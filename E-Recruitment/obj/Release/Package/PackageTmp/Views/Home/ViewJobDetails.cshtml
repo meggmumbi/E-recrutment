@@ -1,0 +1,439 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "ViewJobDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int ResponsibilityCounter = 0;
+    int RequirementCounter = 0;
+    int CheckListCounter = 0;
+    int WorkCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center card" data-background-color="darkgreen">
+                <h5 class="title"><i><strong>Welcome to e-Recruitment System</strong></i></h5>
+                <h5>Advertised Job Vacancy General Information and Requirements</h5>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="form-group">
+                <div class="form-group">
+                    @if (TempData["error"] != null)
+                    {
+
+                        <div class="alert alert-danger" id="alert-danger" role="alert">
+                            @TempData["error"]
+                        </div>
+
+                    }
+                    @if (TempData["success"] != null)
+                    {
+
+                        <div class="alert alert-success" id="alert-danger" role="alert">
+                            @TempData["success"]
+                        </div>
+
+                    }
+                    else
+                    {
+
+                    }
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 pull-right">
+                        @foreach (AdvertisedJobPositions job in Model.OpenJobVacancies)
+                        {
+                            <div class="pull-right">
+                                <a href="#" onclick="ApplyOnline('@Url.Action("JobApplication", "Home", new { VacancyID =@job.Document_No })')" class="btn btn-primary pull-right ladda-button"><i class="fa fa-share"></i>Apply for this Position</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div id="responsesfeedback" style="display: none" data-dismiss="alert"></div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_overview" data-toggle="tab"><p style="color:black"><strong>Overview</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_requirements" data-toggle="tab"><p style="color:black"><strong>Vacancy Requirements</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_responsibilities" data-toggle="tab"><p style="color:black"><strong>Vacancy Responsibilities</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_workcondition" data-toggle="tab"><p style="color:black"><strong>Vacancy Work Conditions</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_checklist" data-toggle="tab"><p style="color:black"><strong>Job Requirement CheckList </strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="loader" style="display:none" class="modal">
+                <img src="~/assets/img/ajax-loader.gif" />
+            </div>
+            <div class="tab-pane fade active in" id="tab_overview">
+                @foreach (AdvertisedJobPositions job in Model.OpenJobVacancies)
+                {
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#00c5fb">
+                            <h6><strong>Job Vacancy General Details</strong></h6>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="txtjobNumber" name="txtjobNumber" value="@job.Document_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Job Reference Number:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="txtjobReferenceNumber" name="txtjobReferenceNumber" value="@job.Vacancy_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Positon ID:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="procurementmethod" value="@job.Position_ID" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Position Directorate :<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="mandatorymeeting" value="@job.Directorate" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Document Date:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="documentdate" value="@job.Document_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Job Grade:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="enveloptype" value="@job.Job_Grade_ID" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Position Department:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="enveloptype" value="@job.Department" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">No. of Vcancies:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="externaldocumentno" value="@job.No_of_Openings" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Estimate Annual Salary:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tendervalidity" value="@job.Estimate_Annual_Salary" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Hierarchically Reports To:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="locationcode" value="@job.Hierarchically_Reports_To" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Functionally Reports To:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderexpirydate" value="@job.Functionally_Reports_To" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Seniority Level:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="requisitionproductgroup" value="@job.Seniority_Level" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Terms of Service:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="specialgroupreserv" value="@job.Default_Terms_of_Service_Code" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Employment Type : <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="targetbidergrup" value="@job.Employment_Type" readonly>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="row">
+                    @foreach (AdvertisedJobPositions job in Model.OpenJobVacancies)
+                    {
+                        <div class="panel panel-heading" style="background-color:#00c5fb">
+                            <h6 class="panel-title"><strong>Vacancy Recruitment Details</strong></h6>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Primary Recruitment Reason:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="submissiondate" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Recruitment Start Date:<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="address" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Recruitment End Date: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="submissiondendtime" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Overall Appointing Authority:</label>
+                                <input class="form-control " type="text" id="postcodes" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Date Advertised:</label>
+                                <input class="form-control datetimepicker" type="text" id="startdateoperations" name="startdateoperations" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Planned Employment Start Date:</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Application Closing Date:</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Application Closing Time:</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">No. of Applications Received :</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">No. of Filled Positions:</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" readonly>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="tab-pane fade " id="tab_requirements">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#00c5fb">
+                        <h6 class="panel-title"><strong>Job Vacancy Requirments</strong></h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Description.</th>
+                                            <th>Requirement Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (JobRequirementModel job in Model.JobRequirements)
+                                        {
+                                            RequirementCounter++;
+                                            <tr>
+                                                <td>
+                                                    @RequirementCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => job.Description)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => job.Requirement_Type)
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_checklist">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#00c5fb">
+                        <h6 class="panel-title"><strong>Job Vacancy CheckList</strong></h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Qualification Category</th>
+                                            <th>Description.</th>
+                                            <th>Requirement Type</th>
+                                            <th>Rating Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (CheckListModel job in Model.JobCheckList)
+                                        {
+                                            CheckListCounter++;
+                                            <tr>
+                                                <td>
+                                                    @CheckListCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => job.Qualification_Category)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => job.Description)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => job.Requirement_Type)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => job.Rating_Type)
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_responsibilities">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#00c5fb">
+                        <h6 class="panel-title"><strong>Job Vacancy Responsibilities</strong></h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Description.</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (JobResponsibilitiesModel job in Model.JobResponsibilities)
+                                        {
+                                            ResponsibilityCounter++;
+                                            <tr>
+                                                <td>
+                                                    @ResponsibilityCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => job.Description)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_workcondition">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#00c5fb">
+                        <h6 class="panel-title"><strong>Job Vacancy Work Conditions</strong></h6>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Condition Category.</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (JobWorkCondition job in Model.WorkCondition)
+                                    {
+                                        WorkCounter++;
+                                        <tr>
+                                            <td>
+                                                @WorkCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => job.Work_Condition_Category)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => job.Description)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_documents_attachment">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-heading" style="background-color:#00c5fb">
+                            <h6 class="panel-title">Job Vacancy Required Documents Attachment </h6>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Document Type</th>
+                                        <th>Requuirment Category </th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @foreach (AdvertisedJobPositions job in Model.OpenJobVacancies)
+        {
+            <div class="form-actions">
+                <div class="row">
+                    <div class="col-xs-8 text-right m-b-30">
+                        <a href="#" onclick="ApplyOnline('@Url.Action("JobApplication", "Home", new { VacancyID =@job.Document_No })')" class="btn btn-primary pull-right ladda-button"><i class="fa fa-share"></i>Apply for this Position</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

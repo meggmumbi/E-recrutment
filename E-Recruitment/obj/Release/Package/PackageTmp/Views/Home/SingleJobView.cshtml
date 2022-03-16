@@ -1,0 +1,202 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "SingleJobView";
+    Layout = null;
+
+    int RequirementCounter = 0;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <title>Jobs -E-Recruitment</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/customFooter.css">
+</head>
+<body>
+    <div class="main-wrapper">      
+            @Html.Action("NavigationMenu", "Home")
+      
+        <div class="page-wrapper job-wrapper">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/assets/img/applynow.png" alt="Los Angeles" width="1600" height="200">
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-8">
+                        @foreach (AdvertisedJobPositions job in Model.OpenJobVacancies)
+                        {
+                        <div class="job-info job-widget">
+                            <h3 class="job-title">@job.Job_Title_Designation</h3>
+                            <span class="job-dept">@job.Vacancy_Status:@job.Job_Grade_ID</span>
+                            <ul class="job-post-det">
+                                <li><i class="fa fa-calendar"></i> Advertised Date: <span class="text-blue">@job.Date_Published</span></li>
+                                <li><i class="fa fa-calendar"></i> Closing Date: <span class="text-blue">@job.ApplicationClosingDateTime </span></li>
+                                <li><i class="fa fa-user-o"></i> Applications: <span class="text-blue">@job.No_of_Applications </span></li>
+                            </ul>
+                        </div>
+                         }
+                        @foreach (CompanyPositionModel job in Model.PositionDetails)
+                        {
+                        <div class="job-content job-widget">
+                            <div class="job-desc-title"><h4>Job Description</h4></div>
+                            <div class="job-description">
+                                <p>@job.Executive_Summary_Job_Purpose</p>
+                            </div>
+                        </div>
+                        }
+                        <div class="job-content job-widget">
+                            <div class="job-desc-title"><h4>Key Responsibilities:</h4></div>
+                            <div class="job-description">
+                                @foreach (JobResponsibilitiesModel reponsibility in Model.JobResponsibilities)
+                                {
+                                    <ul class="square-list">
+                                        <li>@reponsibility.Description</li>
+                                    </ul>
+                                }
+                                </div>
+                            
+                        </div>
+                        <div class="job-content job-widget">
+                            <div class="job-desc-title"><h4>Vacancy Requirements:</h4></div>
+                            <div class="job-description">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Description.</th>
+                                                    <th>Requirement Type</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    @foreach (JobRequirementModel job in Model.JobRequirements)
+                                                    {
+                                                        RequirementCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @RequirementCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => job.Description)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => job.Requirement_Type)
+                                                        </td>
+                                                    </tr>
+                                                    }
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  @foreach (AdvertisedJobPositions job in Model.OpenJobVacancies)
+                  {
+                    <div class="col-md-4">
+                        <div class="job-det-info job-widget">
+                            <a class="btn job-btn" href="/Home/Login">Apply Online</a>
+                           
+                            <div class="info-list">
+                                <span><i class="fa fa-bar-chart"></i></span>
+                                <h5>Job Type</h5>
+                                <p>@job.Employment_Type</p>
+                            </div>
+                            <div class="info-list">
+                                <span><i class="fa fa-money"></i></span>
+                                <h5>Salary</h5>
+                                <p>@job.Estimate_Annual_Salary</p>
+                            </div>
+                            <div class="info-list">
+                                <span><i class="fa fa-ticket"></i></span>
+                                <h5>No. of Vacancies</h5>
+                                <p>@job.No_of_Openings</p>
+                            </div>
+                            <div class="info-list">
+                                <span><i class="fa fa-ticket"></i></span>
+                                <h5>Job Grade</h5>
+                                <p>@job.Job_Grade_ID</p>
+                            </div>
+                            <div class="info-list">
+                                <span><i class="fa fa-map-signs"></i></span>
+                                <h5>Location</h5>
+                                <p>
+                                   @job.Work_Location_Details
+                                </p>
+                            </div>
+                         @foreach (CompanyInformationModel item in Model.ComPanyDetails)
+                         {   <div>
+                                <p>
+                                    <br /><h5>Address:@item.Address</h5>
+                                    <br /><h5>Phone No:@item.PhoneNumber</h5>
+                                    <br /><h5>City:@item.City</h5>
+                                    <br /><h5>Post Code:@item.PostCode</h5>
+                                    <br /><h5>Email Address:@item.EmailAddress</h5>
+                                    <br /><h5>Our Vission:@item.Vison</h5>
+                                    <br /><h5>Our Mission:@item.Mission</h5>
+                                    
+                                </p>
+                            </div>
+                         }
+                            <div class="info-list text-center">
+                                <a class="app-ends" href="#">Application Ends on: @job.Application_Closing_Date</a>
+                            </div>
+                        </div>
+                    </div>
+                  }
+                    <div class="col-md-4">
+                        <div class="job-det-info job-widget">
+                            <div class="job-desc-title"><h4>Application Procedure:</h4></div>
+                            <div class="job-description">
+                                <p>
+                                    To apply for this post you must be a registered user. Log into your account then go to Vacancies, view the post and click on the button: "Apply for this job".
+                                </p>
+                                <ul class="square-list">
+                                    <li>All applicants are required to state their current/last salary..</li>
+                                    <li>
+                                        Candidates must supply an email and telephone contact that will be used when offering interviews.  Only shortlisted candidates will be contacted. Shortlisted candidates shall be required to produce ORIGINALS of their National Identity Card, academic and professional certificates, original transcripts and testimonials, detailed curriculum vitae and valid clearance certificate (certificate of good conduct) during the interviews.
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <footer class="site-footer">
+        @Html.Action("Footer", "Home")
+    </footer>
+    <script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/app.js"></script>
+</body>
+</html>

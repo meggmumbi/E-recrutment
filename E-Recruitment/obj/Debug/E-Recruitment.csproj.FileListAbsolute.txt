@@ -1,0 +1,636 @@
+D:\E-Recruitment\E-Recruitment\bin\ApplicationInsights.config
+D:\E-Recruitment\E-Recruitment\bin\roslyn\csc.exe
+D:\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\E-Recruitment\E-Recruitment\bin\roslyn\System.Collections.Immutable.dll
+D:\E-Recruitment\E-Recruitment\bin\roslyn\System.Reflection.Metadata.dll
+D:\E-Recruitment\E-Recruitment\bin\roslyn\vbc.exe
+D:\E-Recruitment\E-Recruitment\bin\roslyn\VBCSCompiler.exe
+D:\E-Recruitment\E-Recruitment\bin\roslyn\VBCSCompiler.exe.config
+D:\E-Recruitment\E-Recruitment\bin\E-Recruitment.dll.config
+D:\E-Recruitment\E-Recruitment\bin\E-Recruitment.dll
+D:\E-Recruitment\E-Recruitment\bin\E-Recruitment.pdb
+D:\E-Recruitment\E-Recruitment\bin\Antlr3.Runtime.dll
+D:\E-Recruitment\E-Recruitment\bin\EntityFramework.dll
+D:\E-Recruitment\E-Recruitment\bin\EntityFramework.SqlServer.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AI.Agent.Intercept.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AI.DependencyCollector.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AI.Web.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AI.WindowsServer.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.ApplicationInsights.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Core.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Data.Edm.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Data.OData.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Data.Services.Client.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Cookies.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Facebook.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Google.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.OAuth.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Twitter.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Web.Infrastructure.dll
+D:\E-Recruitment\E-Recruitment\bin\Newtonsoft.Json.dll
+D:\E-Recruitment\E-Recruitment\bin\Owin.dll
+D:\E-Recruitment\E-Recruitment\bin\System.Spatial.dll
+D:\E-Recruitment\E-Recruitment\bin\System.Web.Helpers.dll
+D:\E-Recruitment\E-Recruitment\bin\System.Web.Mvc.dll
+D:\E-Recruitment\E-Recruitment\bin\System.Web.Optimization.dll
+D:\E-Recruitment\E-Recruitment\bin\System.Web.Razor.dll
+D:\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Deployment.dll
+D:\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.dll
+D:\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Razor.dll
+D:\E-Recruitment\E-Recruitment\bin\WebGrease.dll
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AI.DependencyCollector.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AI.Web.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AI.WindowsServer.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.ApplicationInsights.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Data.Edm.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Data.OData.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Data.Services.Client.xml
+D:\E-Recruitment\E-Recruitment\bin\System.Spatial.xml
+D:\E-Recruitment\E-Recruitment\bin\System.Web.Helpers.xml
+D:\E-Recruitment\E-Recruitment\bin\System.Web.Mvc.xml
+D:\E-Recruitment\E-Recruitment\bin\System.Web.Optimization.xml
+D:\E-Recruitment\E-Recruitment\bin\System.Web.Razor.xml
+D:\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.xml
+D:\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Deployment.xml
+D:\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Razor.xml
+D:\E-Recruitment\E-Recruitment\bin\Antlr3.Runtime.pdb
+D:\E-Recruitment\E-Recruitment\bin\Newtonsoft.Json.xml
+D:\E-Recruitment\E-Recruitment\bin\EntityFramework.xml
+D:\E-Recruitment\E-Recruitment\bin\EntityFramework.SqlServer.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Core.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Facebook.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Cookies.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.OAuth.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Google.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Twitter.xml
+D:\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\E-Recruitment\E-Recruitment\bin\de\Microsoft.Data.Edm.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\es\Microsoft.Data.Edm.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\it\Microsoft.Data.Edm.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\de\Microsoft.Data.OData.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\es\Microsoft.Data.OData.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\fr\Microsoft.Data.OData.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\it\Microsoft.Data.OData.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ja\Microsoft.Data.OData.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ko\Microsoft.Data.OData.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ru\Microsoft.Data.OData.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\de\System.Spatial.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\es\System.Spatial.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\fr\System.Spatial.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\it\System.Spatial.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ja\System.Spatial.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ko\System.Spatial.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\ru\System.Spatial.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\zh-Hans\System.Spatial.resources.dll
+D:\E-Recruitment\E-Recruitment\bin\zh-Hant\System.Spatial.resources.dll
+D:\E-Recruitment\E-Recruitment\obj\Debug\E-Recruitment.dll
+D:\E-Recruitment\E-Recruitment\obj\Debug\E-Recruitment.pdb
+D:\E-Recruitment\E-Recruitment\obj\Debug\E-Recruitment.csprojResolveAssemblyReference.cache
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ApplicationInsights.config
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\csc.exe
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\System.Collections.Immutable.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\vbc.exe
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\VBCSCompiler.exe
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\roslyn\VBCSCompiler.exe.config
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\E-Recruitment.dll.config
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\E-Recruitment.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\E-Recruitment.pdb
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Antlr3.Runtime.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\EntityFramework.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\EntityFramework.SqlServer.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AI.DependencyCollector.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AI.Web.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AI.WindowsServer.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.ApplicationInsights.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Data.Edm.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Data.OData.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Data.Services.Client.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Google.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Web.Infrastructure.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Newtonsoft.Json.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Owin.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Spatial.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.Helpers.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.Mvc.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.Optimization.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.Razor.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Deployment.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.WebPages.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Razor.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\WebGrease.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AI.DependencyCollector.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AI.Web.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AI.WindowsServer.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.ApplicationInsights.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Data.Edm.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Data.OData.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Data.Services.Client.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Spatial.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.Helpers.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.Mvc.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.Optimization.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.Razor.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.WebPages.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Deployment.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Razor.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Antlr3.Runtime.pdb
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Newtonsoft.Json.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\EntityFramework.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\EntityFramework.SqlServer.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Google.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\de\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\es\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\it\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\de\System.Spatial.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\es\System.Spatial.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\fr\System.Spatial.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\it\System.Spatial.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ja\System.Spatial.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ko\System.Spatial.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\ru\System.Spatial.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\zh-Hans\System.Spatial.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\bin\zh-Hant\System.Spatial.resources.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\obj\Debug\E-Recruitment.csprojResolveAssemblyReference.cache
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\obj\Debug\E-Recruitment.dll
+D:\Dynasoft Portals\E-Recruitment Portals\Kemri E-Recruitment\E-Recruitment\obj\Debug\E-Recruitment.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ApplicationInsights.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\csc.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\System.Collections.Immutable.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\vbc.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\VBCSCompiler.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\roslyn\VBCSCompiler.exe.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\E-Recruitment.dll.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\E-Recruitment.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\E-Recruitment.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Antlr3.Runtime.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\EntityFramework.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\EntityFramework.SqlServer.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AI.DependencyCollector.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AI.Web.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AI.WindowsServer.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.ApplicationInsights.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Data.Edm.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Data.OData.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Data.Services.Client.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Google.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Web.Infrastructure.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Newtonsoft.Json.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Spatial.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.Helpers.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.Mvc.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.Optimization.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.Razor.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Deployment.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Razor.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\WebGrease.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AI.DependencyCollector.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AI.Web.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AI.WindowsServer.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.ApplicationInsights.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Data.Edm.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Data.OData.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Data.Services.Client.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Spatial.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.Helpers.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.Mvc.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.Optimization.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.Razor.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Deployment.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\System.Web.WebPages.Razor.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Antlr3.Runtime.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Newtonsoft.Json.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\EntityFramework.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\EntityFramework.SqlServer.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Google.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\de\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\es\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\it\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\de\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\es\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\fr\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\it\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ja\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ko\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\ru\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\zh-Hans\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\bin\zh-Hant\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\obj\Debug\E-Recruitment.csprojResolveAssemblyReference.cache
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\obj\Debug\E-Recruitment.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\E-Recruitment\E-Recruitment\obj\Debug\E-Recruitment.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ApplicationInsights.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\csc.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\System.Collections.Immutable.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\vbc.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\VBCSCompiler.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\roslyn\VBCSCompiler.exe.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\E-Recruitment.dll.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\E-Recruitment.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\E-Recruitment.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Antlr3.Runtime.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\CaptchaMvc.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\EntityFramework.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\EntityFramework.SqlServer.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AI.DependencyCollector.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AI.Web.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AI.WindowsServer.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.ApplicationInsights.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Data.Edm.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Data.OData.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Data.Services.Client.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.Google.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Web.Infrastructure.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Newtonsoft.Json.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Spatial.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.Helpers.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.Mvc.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.Optimization.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.Razor.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.WebPages.Deployment.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.WebPages.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.WebPages.Razor.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\WebGrease.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\CaptchaMvc.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\CaptchaMvc.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AI.DependencyCollector.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AI.Web.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AI.WindowsServer.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.ApplicationInsights.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Data.Edm.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Data.OData.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Data.Services.Client.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Spatial.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.Helpers.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.Mvc.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.Optimization.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.Razor.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.WebPages.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.WebPages.Deployment.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\System.Web.WebPages.Razor.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Antlr3.Runtime.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Newtonsoft.Json.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\EntityFramework.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\EntityFramework.SqlServer.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.Google.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\de\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\es\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\it\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\de\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\es\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\fr\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\it\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ja\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ko\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\ru\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\zh-Hans\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\bin\zh-Hant\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\obj\Debug\E-Recruitment.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\obj\Debug\E-Recruitment.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KEMRI\ERECRUITMENT V2\E-Recruitment\obj\Debug\E-Recruitment.csprojResolveAssemblyReference.cache
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ApplicationInsights.config
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\csc.exe
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\System.Collections.Immutable.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\vbc.exe
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\VBCSCompiler.exe
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\roslyn\VBCSCompiler.exe.config
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\E-Recruitment.dll.config
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\E-Recruitment.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\E-Recruitment.pdb
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Antlr3.Runtime.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\CaptchaMvc.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\EntityFramework.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\EntityFramework.SqlServer.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AI.Agent.Intercept.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AI.DependencyCollector.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AI.Web.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AI.WindowsServer.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.ApplicationInsights.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AspNet.Identity.Core.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Data.Edm.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Data.OData.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Data.Services.Client.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.Cookies.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.Facebook.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.Google.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.OAuth.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.Twitter.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Web.Infrastructure.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Newtonsoft.Json.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Owin.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Spatial.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.Helpers.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.Mvc.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.Optimization.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.Razor.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.WebPages.Deployment.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.WebPages.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.WebPages.Razor.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\WebGrease.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\CaptchaMvc.pdb
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\CaptchaMvc.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AI.DependencyCollector.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AI.Web.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AI.WindowsServer.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.ApplicationInsights.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Data.Edm.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Data.OData.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Data.Services.Client.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Spatial.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.Helpers.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.Mvc.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.Optimization.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.Razor.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.WebPages.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.WebPages.Deployment.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\System.Web.WebPages.Razor.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Antlr3.Runtime.pdb
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Newtonsoft.Json.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\EntityFramework.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\EntityFramework.SqlServer.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AspNet.Identity.Core.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.Facebook.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.Cookies.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.OAuth.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.Google.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.Twitter.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\de\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\es\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\it\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\de\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\es\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\fr\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\it\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ja\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ko\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ru\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\de\System.Spatial.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\es\System.Spatial.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\fr\System.Spatial.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\it\System.Spatial.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ja\System.Spatial.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ko\System.Spatial.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\ru\System.Spatial.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\zh-Hans\System.Spatial.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\bin\zh-Hant\System.Spatial.resources.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\obj\Debug\E-Recruitment.csprojResolveAssemblyReference.cache
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\obj\Debug\E-Recruitment.dll
+D:\C#projects\Clients\KEMRI\kemri-e-recruitment-beta-v1.1\E-Recruitment\obj\Debug\E-Recruitment.pdb

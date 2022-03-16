@@ -1,0 +1,45 @@
+﻿@model IEnumerable<E_Recruitment.Models.FileModel>
+@{
+    ViewBag.Title = "RegistrationUploadsList";
+    Layout = "";
+    int FileCounter = 0;
+}
+<div class="row">
+    <div id="documentsfeedback" style="display: none" data-dismiss="alert"></div>
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table table-striped custom-table datatable CandidateRegistrationDocuments" id="CandidateRegistrationDocuments">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>File Name</th>
+                        <th>File Size</th>
+                        <th>Download</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>                  
+                        @foreach (var item in Model)
+                        {
+                            FileCounter++;
+                        <tr>
+                            <td>@FileCounter</td>
+                            <td>@Html.DisplayFor(modelItem => item.FileName)</td>
+                            <td>@string.Format("{0:0,0}", item.Size)</td>
+                            <td>
+                                <button type="submit" class="btn btn-success pull-left rounded"><i class="fa fa-download"></i> Download</button>                           
+                             </td>
+                            <td>
+                                <a class="btn btn-danger" onclick="DeleteDocuments('@Url.Action("DeleteCandidateFile", "Home", new { FileName = @item.FileName })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                            </td>
+                        </tr>
+
+                        }
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

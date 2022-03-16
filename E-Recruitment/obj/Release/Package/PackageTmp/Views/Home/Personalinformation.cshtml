@@ -1,0 +1,217 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "Personal Information";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card">
+    <div class="card-header text-center" data-background-color="darkgreen">
+        <h5 class="title"><i><strong>Candidate Registration</strong></i></h5>
+    </div>
+</div>
+<div class="panel panel-body">
+    <div class="panel panel-primary">
+       
+        <div class="panel-heading">
+            Personal Information
+        </div>
+        <div class="panel-body">
+            @foreach (ApplicantProfileMode profile in Model.CandidateProfile)
+            {
+                <div class="row">
+                    <div id="feedback" style="display: none" data-dismiss="alert"></div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Title <span class="text-danger">*</span></label>
+                            <select data-live-search="true" class="form-control input-circle select2" id="prefixtype" name="prefixtype">
+                                <option value="0">Prof</option>
+                                <option value="1">Doctor</option>
+                                <option value="2">Mr</option>
+                                <option value="3">Mrs</option>
+                                <option value="4">Miss</option>
+                                <option value="5">Ms</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">SurName <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="txtsurname" name="txtsurname" value="@profile.Last_Name" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">First Name<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="txtfirstname" name="txtfirstname" value="@profile.First_Name" required="true">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Other Names</label>
+                            <input class="form-control" type="text" id="txtothernames" value="@profile.Last_Name">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Gender <span class="text-danger">*</span></label>
+                            <select data-live-search="true" class="form-control input-circle select2" id="txtgender" name="txtgender">
+                                <option value="0">--Select Marital Status--</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Marital Status <span class="text-danger">*</span></label>
+                            <select data-live-search="true" class="form-control input-circle select2" id="maritalstatus" name="maritalstatus">
+                                <option value="">--Select Marital Status--</option>
+                                <option value="1">Single</option>
+                                <option value="2">Married</option>
+                                <option value="3">Divorced</option>
+                                <option value="4">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Date of Birth <span class="text-danger">*</span></label>
+                            <div class="cal-icon"><input class="form-control datetimepicker" style="" type="text" id="txtdob" name="txtdob" value="@profile.DOB"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">ID No.<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="txtidnumber" name="txtidnumber" value="@profile.IDNumber">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Religion <span class="text-danger">*</span></label>
+                            <select data-live-search="true" class="form-control input-circle select2" id="txtreligion" name="txtreligion">
+                                <option value="">--Select Religion--</option>
+                                <option value="0">Christianity</option>
+                                <option value="1">Islam</option>
+                                <option value="2">Hinduism</option>
+                                <option value="3">Buddhism</option>
+                                <option value="4">Folk religion</option>
+                                <option value="5">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Passport No</label>
+                            <input class="form-control" type="text" id="txtpassport" name="txtpassport" value="@profile.Passport_No">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Email Address <span class="text-danger">*</span></label>
+                            <input class="form-control" type="email" id="emailaddress" name="emailaddress" value="@profile.E_Mail">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Nationality <span class="text-danger">*</span></label>
+                            @Html.Action("Countries", "Home")
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Post Code <span class="text-danger">*</span></label>
+                            @Html.Action("PostCodes", "Home")
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">City\Town<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="txtcity" name="txtcity" value="@profile.City" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">County of Residence<span class="text-danger">*</span></label>
+                            @Html.Action("ResidenceCounties", "Home")
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">County of Origin(Home County)<span class="text-danger">*</span></label>
+                            @Html.Action("OriginCounty", "Home")
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Ethnicity<span class="text-danger">*</span></label>
+                            @Html.Action("Ethnicities", "Home")
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">N.H.I.F Number</label>
+                            <input class="form-control" type="text" id="txtnhif" name="txtnhif" value="@profile.NHIF">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">N.S.S.F Number</label>
+                            <input class="form-control" type="text" id="txtnssf" name="txtnssf" value="@profile.NSSF">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Mobile Phone Number <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="txtmobilenumber" name="txtmobilenumber" value="@profile.Mobile_Phone_No">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Alternative Phone Number</label>
+                            <input class="form-control" type="text" id="txtalternativeNumber" name="txtalternativeNumber" value="@profile.Phone_No">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">KRA Pin <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="txtkrapin" name="txtkrapin" value="@profile.KRA_Pin">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Are you a person Living with Disability <span class="text-danger">*</span></label>
+                            <select data-live-search="true" class="form-control input-circle select2" id="disabled" name="disabled" onchange="showDiv('hidden_div', this)">
+                                <option value="False">No</option>
+                                <option value="True">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="hidden_div" style="display:none">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Description of Disability<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="disabilitydescription" name="disabilitydescription" value="@profile.Disability_Description">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Disability Certificate No.<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="txtdisabilitycertificateNumber" name="txtdisabilitycertificateNumber" value="@profile.Disability_Certificate_No">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Postal Address <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="txtpobox" name="txtpobox" value="@profile.Address">
+                        </div>
+                    </div>
+                </div>
+            }
+            <center>
+                <button class="btn btn-primary btn_personalinformations" id="btn_personalinformations" name="btn_personalinformations" type="button">Submit Details</button>
+            </center>
+        </div>
+    </div>
+</div>

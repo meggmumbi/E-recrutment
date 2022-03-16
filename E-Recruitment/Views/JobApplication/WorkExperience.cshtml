@@ -1,0 +1,232 @@
+﻿@model E_Recruitment.Models.EmploymentDetailsModel
+
+@{
+    ViewBag.Title = "WorkExperience";
+}
+<div class="panel panel-body">
+    <div class="card">
+        <div class="card-header text-center" data-background-color="darkgreen">
+            <h5 class="title"><i><strong>Candidate Registration</strong></i></h5>
+        </div>
+        <center><h3>Welcome to the E-Recruitment Portal Job Application Form</h3></center>
+        @using (Html.BeginForm("SubmitEmploymentExperience", "JobApplication", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Employment Details (Starting with the Current)<div class="pull-right"><i class="fa fa-angle-left"></i>Step 5 of 8<i class="fa fa-angle-right"></i></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @if (TempData["error"] != null)
+                        {
+
+                            <div class="alert alert-danger" id="alert-danger" role="alert">
+                                @TempData["error"]
+                            </div>
+
+                        }
+                        else
+                        {
+                            <div class="alert alert-success" id="alert-success" role="alert">
+                                @TempData["success"]
+                            </div>
+                        }
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.EmployerName, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.EmployerName, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.EmployerName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Designation, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Designation, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.Designation, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.EndDate, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TermsofService, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.DropDownListFor(model => model.TermsofService, ViewBag.TermsofService as SelectList, new { @class = "form-control select2", @required = "required", id = "business_type" })
+                                    @Html.ValidationMessageFor(model => model.TermsofService, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TotalYears, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.TotalYears, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.TotalYears, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SummaryDetails, htmlAttributes: new { @class = "control-label col-md-8" })<br />
+                                <div class="form-group">
+                                    @Html.TextAreaFor(m => m.SummaryDetails, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.SummaryDetails, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <center>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <input type="submit" value="Save Employment Details" class="btn btn-primary ladda-button" />
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <div class="panel-body">
+                                    <table id="tbl_AllApplicantDetails" width="100%" cellspacing="1">
+                                        <thead>
+                                            <tr>
+                                                <th>Employer Name</th>
+                                                <th>Job Title</th>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                                <th>Term of Service</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            @Html.ActionLink("Previous", "RegistrationMembership", "JobApplication", null, new { @class = "btn btn-warning ladda-button fa fa-arrow-left" })
+                        </div>
+                        <div class="pull-right">
+                            @Html.ActionLink("Next", "Referees", "JobApplication", null, new { @class = "btn btn-success ladda-button fa fa-arrow-right" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+    <div>
+        @Html.ActionLink("Back to Dashbaord", "Dashbaord", "Home", null, new { @class = "btn btn-warning ladda-button  fa fa-arrow-right" })
+    </div>
+
+</div>
+<script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+<script>
+        $(document).ready(function () {
+            var oTable = $('#tbl_AllApplicantDetails').DataTable({
+                "ajax": {
+                    "url": '/CadindateProfile/GetApplicantEmploymentDetails',
+                    "type": "GET",
+                    "datatype" : "json"
+                },
+                "columns": [
+                    { "data": "EmployerName", "autoWidth": true },
+                    { "data": "Designation", "autoWidth": true },
+                    { "data": "StartDate", "autoWidth": true },
+                    { "data": "EndDate", "autoWidth": true },
+                    { "data": "TermsofService", "autoWidth": true },
+                    {
+                        "data": "EntryNumber", "width": "50px", "render": function (data) {
+                            return ' <a class="btn btn-info" class="popup" href="/CandidateProfile/EditAcademicQualifications/' + data + '"><i class="fa fa-pencil m-r-10">Edit</a>';
+                        }
+                    },
+                    {
+                        "data": "EntryNumber", "width": "50px", "render": function (data) {
+                            return '<a class="btn btn-danger" class="popup" href="/CandidateProfile/delete/' + data + '"><i class="fa fa-trash m-r-10">Delete</a>';
+                        }
+                    }
+                ]
+            })
+            $('.tablecontainer').on('click', 'a.popup', function (e) {
+                e.preventDefault();
+                OpenPopup($(this).attr('href'));
+            })
+            function OpenPopup(pageUrl) {
+                var $pageContent = $('<div/>');
+                $pageContent.load(pageUrl, function () {
+                    $('#popupForm', $pageContent).removeData('validator');
+                    $('#popupForm', $pageContent).removeData('unobtrusiveValidation');
+                    $.validator.unobtrusive.parse('form');
+
+                });
+
+                $dialog = $('<div class="popupWindow" style="overflow:auto"></div>')
+                          .html($pageContent)
+                          .dialog({
+                              draggable : false,
+                              autoOpen : false,
+                              resizable : false,
+                              model : true,
+                              title:'Popup Dialog',
+                              height : 550,
+                              width : 600,
+                              close: function () {
+                                  $dialog.dialog('destroy').remove();
+                              }
+                          })
+
+                $('.popupWindow').on('submit', '#popupForm', function (e) {
+                    var url = $('#popupForm')[0].action;
+                    $.ajax({
+                        type : "POST",
+                        url : url,
+                        data: $('#popupForm').serialize(),
+                        success: function (data) {
+                            if (data.status) {
+                                $dialog.dialog('close');
+                                oTable.ajax.reload();
+                            }
+                        }
+                    })
+
+                    e.preventDefault();
+                })
+                $dialog.dialog('open');
+            }
+        })
+</script>
+
+

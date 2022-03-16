@@ -1,0 +1,274 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "JobOverviewDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content container-fluid">
+    <div id="responsesfeedback" style="display: none" data-dismiss="alert"></div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_overview" data-toggle="tab"><p style="color:black"><strong>Job Overview</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_purchase_items" data-toggle="tab"><p style="color:black"><strong>Vacancy Requirements</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_tender_requirements" data-toggle="tab"><p style="color:black"><strong>Vacancy Responsibilities</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_project_works" data-toggle="tab"><p style="color:black"><strong>Work Condition</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_tender_documents" data-toggle="tab"><p style="color:black"><strong>Required Documents</strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_overview">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h6><strong><u>Job Vacancy General Details</u></strong></h6>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">No.<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="tenderdescription" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Job Reference Number.<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="tenderdescription" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Job Title/Designation:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Vacancy Advertisement Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Department:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="procurementmethod" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Region:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="mandatorymeeting" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Document Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="documentdate" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Employment Start Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="enveloptype" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">No. Of Openings:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="externaldocumentno" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Recruitement Start Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="tendervalidity" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Recruitement End Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="locationcode" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Estimate Monthly Salary:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="tenderexpirydate" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Hierarchically Reports To:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="requisitionproductgroup" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Functionaly Reports To:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="specialgroupreserv" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Target Bidder Group: <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="targetbidergrup" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Job Grade:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="bidselectionmethod" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Seniority Level:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="bidselectionmethod" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Terms of Service:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="bidselectionmethod" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Employment Type:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="bidselectionmethod" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Application Start Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="bidselectionmethod" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Application Closing Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="bidselectionmethod" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">No of Filled Positions:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="bidselectionmethod" value="" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">No. of Posts:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="bidselectionmethod" value="" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_purchase_items">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h6 class="panel-title"><strong><u>Job Vacancy Requirements</u></strong></h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Qualification Category</th>
+                                            <th>Qualification Code.</th>
+                                            <th>Description</th>
+                                            <th>Requirement Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_tender_requirements">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h3 class="panel-title"><strong><u>Job Vacancy Responsibilities</u></strong></h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Qualification Category</th>
+                                            <th>Qualification Code.</th>
+                                            <th>Description</th>
+                                            <th>Requirement Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_project_works">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h6 class="panel-title"><strong><u>Work Conditions</u></strong></h6>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Condition Category</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_tender_documents">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h6 class="panel-title">Download Tender Documents</h6>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>File Name</th>
+                                        <th>Download </th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-actions">
+            <div class="row">
+                <div class="col-md-offset-5 col-md-8">
+                    <a href="#" class="btn btn-primary pull-left"><i class="fas fa fa-angle-left"></i> &nbsp;Backward</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

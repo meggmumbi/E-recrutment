@@ -1,0 +1,357 @@
+﻿@model E_Recruitment.Models.FileModel
+@{
+    ViewBag.Title = "DocumentsUpload";
+}
+<div class="panel panel-body">
+    <div class="card">
+        <div class="card-header text-center" data-background-color="darkgreen">
+            <h5 class="title"><i><strong>Candidate Registration</strong></i></h5>
+        </div>
+        <center><h3>Welcome to the E-Recruitment Portal Job Application Form</h3></center> 
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Referees (people who have interacted with you professionally)<div class="pull-right"><i class="fa fa-angle-left"></i>Step 4 of 8<i class="fa fa-angle-right"></i></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    @if (TempData["error"] != null)
+                    {
+
+                        <div class="alert alert-danger" id="alert-danger" role="alert">
+                            @TempData["error"]
+                        </div>
+
+                    }
+                    else
+                    {
+                        <div id="alert-success" role="alert">
+                            @TempData["success"]
+                        </div>
+                    }
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h6 class="panel-title"> <strong>Section 1 (Attach Statutory Documents)</strong></h6>
+                        <p>Please Attach Relevant documents supporting your Application</p>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    @using (Html.BeginForm("CandidateAttachDocuments", "JobApplication", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>1. Upload your EACC Clearance</label>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="fileacademicqualifications">
+                                        @Html.ValidationMessageFor(model => model.EaccClearence, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>2. Upload your Police Clearance</label>
+                                    <div class="form-group">
+                                        <input type="file" id="filepoliceclearance" class="form-control" />
+                                        @Html.ValidationMessageFor(model => model.PoliceClearance, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>3. Upload your Tax Compliance Certificate</label>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="filekracertificate">
+                                        @Html.ValidationMessageFor(model => model.KRApin, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>4. Upload your Helb Clearance Certificate</label>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="filehelbclearance">
+                                        @Html.ValidationMessageFor(model => model.HelbClearance, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>5. Upload your Credit Reference Bureau Report</label>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="filecreditreferencebereau">
+                                        @Html.ValidationMessageFor(model => model.CRBClearance, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <center>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <input type="submit" value="Upload Documents" class="btn btn-primary ladda-button" />
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <div class="panel-body">
+                                    <table class="table table-striped custom-table datatable" id="tbl_applicant_qualifications">
+                                        <thead>
+                                            <tr>
+                                                <th>Employer Name</th>
+                                                <th>Job Title</th>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                                <th>Term of Service</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h6 class="panel-title"> <strong>Section 2 ( Attach Application Letter, CV)</strong></h6>
+                            <p>Please Attach Relevant documents supporting your Application</p>
+                        </div>
+                    </div>
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>7. Upload your Application  Letter</label>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="fileapplicationletter">
+                                        @Html.ValidationMessageFor(model => model.ApplicationLetter, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>8. Upload your CV/Resume</label>
+                                    <input type="file" class="form-control" id="filecvfileupload">
+                                    @Html.ValidationMessageFor(model => model.Resume, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <center>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <input type="submit" value="Upload Documents" class="btn btn-primary ladda-button" />
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <div class="panel-body">
+                                    <table class="table table-striped custom-table datatable" id="tbl_applicant_qualifications">
+                                        <thead>
+                                            <tr>
+                                                <th>Employer Name</th>
+                                                <th>Job Title</th>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                                <th>Term of Service</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h6 class="panel-title"> <strong>Section 3 (Academic Qualifications,Professional Qualifications)</strong></h6>
+                            <p>Please Attach Relevant documents supporting your Application</p>
+                        </div>
+                    </div>
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>9. Upload your Academic Qualification</label>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="fileacademicqualifications">
+                                        @Html.ValidationMessageFor(model => model.AcademicQualification, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>10. Upload your Proffessional Qualification</label>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="fileproffesionalualifications">
+                                        @Html.ValidationMessageFor(model => model.ProfessionalQualification, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>11. Upload your Testimonials</label>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="filetestimonials">
+                                        @Html.ValidationMessageFor(model => model.Testimonials, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>12. Upload your List of Publications in Referreed Journals </label>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="fileReferreed">
+                                        @Html.ValidationMessageFor(model => model.Testimonials, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <center>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <input type="submit" value="Upload Documents" class="btn btn-primary ladda-button" />
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <div class="panel-body">
+                                    <table class="table table-striped custom-table datatable" id="tbl_applicant_qualifications">
+                                        <thead>
+                                            <tr>
+                                                <th>Employer Name</th>
+                                                <th>Job Title</th>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                                <th>Term of Service</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        @Html.ActionLink("Previous", "ProfessionalQualifications", "JobApplication", null, new { @class = "btn btn-warning ladda-button" })
+                    </div>
+                    <div class="pull-right">
+                        @Html.ActionLink("Next", "ProfessionalQualifications", "JobApplication", null, new { @class = "btn btn-success ladda-button" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
+<script>
+        $(document).ready(function () {
+            var oTable = $('#tbl_applicant_qualifications').DataTable({
+                "ajax": {
+                    "url": '/JobApplication/GetApplicantAcademicQualifications',
+                    "type" : "GET",
+                    "datatype" : "json"
+                },
+                "columns": [
+                    { "data": "EducationLevel", "autoWidth": true },
+                    { "data": "Institution", "autoWidth": true },
+                    { "data": "Country", "autoWidth": true },
+                    { "data": "AttainedScore", "autoWidth": true },
+                    { "data": "GraduationYear", "autoWidth": true },
+                    {
+                        "data": "EntryNo", "width": "50px", "render": function (data) {
+                            return '<a class="popup" href="/JobApplication/EditAcademicQualifications/' + data + '">Edit</a>';
+                        }
+                    },
+                    {
+                        "data": "EntryNo", "width": "50px", "render": function (data) {
+                            return '<a class="popup" href="/JobApplication/delete/' + data + '">Delete</a>';
+                        }
+                    }
+                ]
+            })
+            $('.tablecontainer').on('click', 'a.popup', function (e) {
+                e.preventDefault();
+                OpenPopup($(this).attr('href'));
+            })
+            function OpenPopup(pageUrl) {
+                var $pageContent = $('<div/>');
+                $pageContent.load(pageUrl, function () {
+                    $('#popupForm', $pageContent).removeData('validator');
+                    $('#popupForm', $pageContent).removeData('unobtrusiveValidation');
+                    $.validator.unobtrusive.parse('form');
+
+                });
+
+                $dialog = $('<div class="popupWindow" style="overflow:auto"></div>')
+                          .html($pageContent)
+                          .dialog({
+                              draggable : false,
+                              autoOpen : false,
+                              resizable : false,
+                              model : true,
+                              title:'Popup Dialog',
+                              height : 550,
+                              width : 600,
+                              close: function () {
+                                  $dialog.dialog('destroy').remove();
+                              }
+                          })
+
+                $('.popupWindow').on('submit', '#popupForm', function (e) {
+                    var url = $('#popupForm')[0].action;
+                    $.ajax({
+                        type : "POST",
+                        url : url,
+                        data: $('#popupForm').serialize(),
+                        success: function (data) {
+                            if (data.status) {
+                                $dialog.dialog('close');
+                                oTable.ajax.reload();
+                            }
+                        }
+                    })
+
+                    e.preventDefault();
+                })
+                $dialog.dialog('open');
+            }
+        })
+</script>
+
+
+

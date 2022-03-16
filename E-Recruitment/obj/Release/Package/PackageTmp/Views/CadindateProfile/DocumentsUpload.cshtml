@@ -1,0 +1,687 @@
+﻿@model E_Recruitment.Models.FileModel
+
+@{
+    ViewBag.Title = "CandidateAttachDocuments";
+}
+<div class="panel panel-body">
+    <div class="card">
+        <div class="card-header text-center" data-background-color="darkgreen">
+            <h5 class="title"><i><strong>Candidate Registration</strong></i></h5>
+        </div>
+        <center><h3>Welcome to the E-Recruitment Portal Complete your Profile</h3></center>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Referees (people who have interacted with you professionally)<div class="pull-right"><i class="fa fa-angle-left"></i>Step 4 of 8<i class="fa fa-angle-right"></i></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h6 class="panel-title"> <strong>Section 1 (Attach Statutory Documents)</strong></h6>
+                        <p>Please Attach Relevant documents supporting your Application</p>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    @using (Html.BeginForm("UploadCandidateStatutoryAttachDocuments", "CadindateProfile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            @if (TempData["error"] != null)
+                            {
+
+                                <div class="alert alert-danger" id="alert-danger" role="alert">
+                                    @TempData["error"]
+                                </div>
+                            }
+                            @if (TempData["success"] != null)
+                            {
+
+                                <div class="alert alert-success" id="alert-success" role="alert">
+                                    @TempData["success"]
+                                </div>
+
+                            }
+                            else
+                            {
+
+                            }
+                        </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>1. Upload your EACC Clearance</label>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.statutory, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.statutory, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>2. Upload your Police Clearance</label>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.statutory, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.statutory, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>3. Upload your Tax Compliance Certificate</label>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.statutory, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.statutory, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>4. Upload your Helb Clearance Certificate</label>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.statutory, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.statutory, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>5. Upload your Credit Reference Bureau Report</label>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.statutory, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.statutory, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <center>
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <input type="submit" value="Upload Documents" class="btn btn-primary ladda-button" />
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <div class="panel-body">
+                                    <table id="tbl_attachmentDocumentsDetails" width="100%" cellspacing="1">
+                                        <thead>
+                                            <tr>
+                                                <th>File Name</th>
+                                                <th>File Size</th>
+                                                <th>Download</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h6 class="panel-title"> <strong>Section 2 ( Attach Application Letter, CV)</strong></h6>
+                            <p>Please Attach Relevant documents supporting your Application</p>
+                        </div>
+                    </div>
+                    @using (Html.BeginForm("UploadCandidateApplicationLetterAttachDocuments", "CadindateProfile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            @if (TempData["error"] != null)
+                            {
+
+                                <div class="alert alert-danger" id="alert-danger" role="alert">
+                                    @TempData["error1"]
+                                </div>
+                            }
+                            @if (TempData["success1"] != null)
+                            {
+
+                                <div class="alert alert-success" id="alert-success" role="alert">
+                                    @TempData["success1"]
+                                </div>
+
+                            }
+                            else
+                            {
+
+                            }
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>7. Upload your Application  Letter</label>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(model => model.applicationletter, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                        @Html.ValidationMessageFor(model => model.applicationletter, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>8. Upload your CV/Resume</label>
+                                    @Html.TextBoxFor(model => model.applicationletter, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                    @Html.ValidationMessageFor(model => model.applicationletter, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row">
+                                <center>
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <input type="submit" value="Upload Documents" class="btn btn-primary ladda-button" />
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <div class="panel-body">
+                                    <table id="tbl_attachmentDocumentsDetails1" width="100%" cellspacing="1">
+                                        <thead>
+                                            <tr>
+                                                <th>File Name</th>
+                                                <th>File Size</th>
+                                                <th>Download</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h6 class="panel-title"> <strong>Section 3 (Academic Qualifications,Professional Qualifications)</strong></h6>
+                            <p>Please Attach Relevant documents supporting your Application</p>
+                        </div>
+                    </div>
+                    @using (Html.BeginForm("UploadCandidateProffessionalQualificationsAttachDocuments", "CadindateProfile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            @if (TempData["error2"] != null)
+                            {
+
+                                <div class="alert alert-danger" id="alert-danger" role="alert">
+                                    @TempData["error2"]
+                                </div>
+                            }
+                            @if (TempData["success2"] != null)
+                            {
+
+                                <div class="alert alert-success" id="alert-success" role="alert">
+                                    @TempData["success2"]
+                                </div>
+
+                            }
+                            else
+                            {
+
+                            }
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>9. Upload your Academic Qualification</label>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(model => model.qualifications, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                        @Html.ValidationMessageFor(model => model.qualifications, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>10. Upload your Proffessional Qualification</label>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(model => model.qualifications, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                        @Html.ValidationMessageFor(model => model.qualifications, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>11. Upload your Testimonials</label>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.qualifications, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.qualifications, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <center>
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <input type="submit" value="Upload Documents" class="btn btn-primary ladda-button" />
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <div class="panel-body">
+                                    <table id="tbl_attachmentDocumentsDetails2" width="100%" cellspacing="1">
+                                        <thead>
+                                            <tr>
+                                                <th>File Name</th>
+                                                <th>File Size</th>
+                                                <th>Download</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h6 class="panel-title"> <strong>Section 4 (Developed Proposals and Published Journals)</strong></h6>
+                            <p>Please Attach Relevant documents supporting your Application</p>
+                        </div>
+                    </div>
+                    @using (Html.BeginForm("UploadCandidateJournalsAttachDocuments", "CadindateProfile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            @if (TempData["error3"] != null)
+                            {
+
+                                <div class="alert alert-danger" id="alert-danger" role="alert">
+                                    @TempData["error3"]
+                                </div>
+                            }
+                            @if (TempData["success3"] != null)
+                            {
+
+                                <div class="alert alert-success" id="alert-success" role="alert">
+                                    @TempData["success3"]
+                                </div>
+
+                            }
+                            else
+                            {
+
+                            }
+                        </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>12. Upload Developed Proposals</label>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.proposals, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.proposals, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>13. Upload Funded Proposals</label>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.proposals, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.proposals, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>14. Upload Published Articles in Refereed Journals as the First or Last Author</label>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.proposals, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.proposals, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>15. Upload  Published Aritcles in refereed Journals as the First or Lead Author </label>
+                                        <div class="form-group">
+                                            @Html.TextBoxFor(model => model.proposals, "", new { @type = "file", @class = "form-control floating", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.proposals, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <center>
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <input type="submit" value="Upload Documents" class="btn btn-primary ladda-button" />
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <div class="panel-body">
+                                    <table id="tbl_attachmentDocumentsDetails4" width="100%" cellspacing="1">
+                                        <thead>
+                                            <tr>
+                                                <th>File Name</th>
+                                                <th>File Size</th>
+                                                <th>Download</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        @Html.ActionLink("Previous", "ProfessionalQualifications", "CadindateProfile", null, new { @class = "btn btn-warning ladda-button fa fa-arrow-left" })
+                    </div>
+                    <div class="pull-right">
+                        @Html.ActionLink("Next", "DeclarationForms", "CadindateProfile", null, new { @class = "btn btn-success ladda-button fa fa-arrow-right" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        @Html.ActionLink("Back to Dashbaord", "Dashbaord", "Home", null, new { @class = "btn btn-warning ladda-button fa fa-arrow-left" })
+    </div>
+</div>
+<script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+<script>
+        $(document).ready(function () {
+            var oTable = $('#tbl_attachmentDocumentsDetails').DataTable({
+                "ajax": {
+                    "url": '/CadindateProfile/GetCandidateDocumentsChapter6UploadsList',
+                    "type": "GET",
+                    "datatype" : "json"
+                },
+                "columns": [
+                    { "data": "FileName", "autoWidth": true },
+                    { "data": "Size", "autoWidth": true },
+                    {
+                        "data": "FileName", "width": "50px", "render": function (data) {
+                            return ' <a class="btn btn-info" class="popup" href="/CadindateProfile/DownloadChapter6CandidateFile?FileName=' + data + '"><i class="fa fa-download m-r-10">Download</a>';
+                        }
+                    },
+                    {
+                        "data": "FileName", "width": "50px", "render": function (data) {
+                            return '<a class="btn btn-danger" class="popup" href="/CadindateProfile/DeleteChapter6CandidateFile?FileName=' + data + '"><i class="fa fa-trash m-r-10">Delete</a>';
+                        }
+                    }
+                ]
+            })
+            $('.tablecontainer').on('click', 'a.popup', function (e) {
+                e.preventDefault();
+                OpenPopup($(this).attr('href'));
+            })
+            function OpenPopup(pageUrl) {
+                var $pageContent = $('<div/>');
+                $pageContent.load(pageUrl, function () {
+                    $('#popupForm', $pageContent).removeData('validator');
+                    $('#popupForm', $pageContent).removeData('unobtrusiveValidation');
+                    $.validator.unobtrusive.parse('form');
+
+                });
+
+                $dialog = $('<div class="popupWindow" style="overflow:auto"></div>')
+                          .html($pageContent)
+                          .dialog({
+                              draggable : false,
+                              autoOpen : false,
+                              resizable : false,
+                              model : true,
+                              title:'Popup Dialog',
+                              height : 550,
+                              width : 600,
+                              close: function () {
+                                  $dialog.dialog('destroy').remove();
+                              }
+                          })
+
+                $('.popupWindow').on('submit', '#popupForm', function (e) {
+                    var url = $('#popupForm')[0].action;
+                    $.ajax({
+                        type : "POST",
+                        url : url,
+                        data: $('#popupForm').serialize(),
+                        success: function (data) {
+                            if (data.status) {
+                                $dialog.dialog('close');
+                                oTable.ajax.reload();
+                            }
+                        }
+                    })
+
+                    e.preventDefault();
+                })
+                $dialog.dialog('open');
+            }
+            var oTable = $('#tbl_attachmentDocumentsDetails1').DataTable({
+                "ajax": {
+                    "url": '/CadindateProfile/GetCandidateDocumentsApplicationsLetterUploadsList',
+                    "type": "GET",
+                    "datatype" : "json"
+                },
+                "columns": [
+                    { "data": "FileName", "autoWidth": true },
+                    { "data": "Size", "autoWidth": true },
+                    {
+                        "data": "FileName", "width": "50px", "render": function (data) {
+                            return ' <a class="btn btn-info" class="popup" href="/CadindateProfile/DownloadApplicationLetterCandidateFile?FileName=' + data + '"><i class="fa fa-download m-r-10">Download</a>';
+                        }
+                    },
+                    {
+                        "data": "FileName", "width": "50px", "render": function (data) {
+                            return '<a class="btn btn-danger" class="popup" href="/CadindateProfile/DeleteApplicationLetterCandidateFile?FileName=' + data + '"><i class="fa fa-trash m-r-10">Delete</a>';
+                        }
+                    }
+                ]
+            })
+            $('.tablecontainer').on('click', 'a.popup', function (e) {
+                e.preventDefault();
+                OpenPopup($(this).attr('href'));
+            })
+            function OpenPopup(pageUrl) {
+                var $pageContent = $('<div/>');
+                $pageContent.load(pageUrl, function () {
+                    $('#popupForm', $pageContent).removeData('validator');
+                    $('#popupForm', $pageContent).removeData('unobtrusiveValidation');
+                    $.validator.unobtrusive.parse('form');
+
+                });
+
+                $dialog = $('<div class="popupWindow" style="overflow:auto"></div>')
+                          .html($pageContent)
+                          .dialog({
+                              draggable : false,
+                              autoOpen : false,
+                              resizable : false,
+                              model : true,
+                              title:'Popup Dialog',
+                              height : 550,
+                              width : 600,
+                              close: function () {
+                                  $dialog.dialog('destroy').remove();
+                              }
+                          })
+
+                $('.popupWindow').on('submit', '#popupForm', function (e) {
+                    var url = $('#popupForm')[0].action;
+                    $.ajax({
+                        type : "POST",
+                        url : url,
+                        data: $('#popupForm').serialize(),
+                        success: function (data) {
+                            if (data.status) {
+                                $dialog.dialog('close');
+                                oTable.ajax.reload();
+                            }
+                        }
+                    })
+
+                    e.preventDefault();
+                })
+                $dialog.dialog('open');
+            }
+            var oTable = $('#tbl_attachmentDocumentsDetails2').DataTable({
+                "ajax": {
+                    "url": '/CadindateProfile/GetCandidateDocumentsAcademicQualificationsUploadsList',
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                        { "data": "FileName", "autoWidth": true },
+                        { "data": "Size", "autoWidth": true },
+                        {
+                            "data": "FileName", "width": "50px", "render": function (data) {
+                                return ' <a class="btn btn-info" class="popup" href="/CadindateProfile/DownloadAcademicQualificationsCandidateFile?FileName=' + data + '"><i class="fa fa-download m-r-10">Download</a>';
+                            }
+                        },
+                        {
+                            "data": "FileName", "width": "50px", "render": function (data) {
+                                return '<a class="btn btn-danger" class="popup" href="/CadindateProfile/DeleteAcademicQualificationsCandidateFile?FileName=' + data + '"><i class="fa fa-trash m-r-10">Delete</a>';
+                            }
+                        }
+                ]
+            })
+            $('.tablecontainer').on('click', 'a.popup', function (e) {
+                e.preventDefault();
+                OpenPopup($(this).attr('href'));
+            })
+            function OpenPopup(pageUrl) {
+                var $pageContent = $('<div/>');
+                $pageContent.load(pageUrl, function () {
+                    $('#popupForm', $pageContent).removeData('validator');
+                    $('#popupForm', $pageContent).removeData('unobtrusiveValidation');
+                    $.validator.unobtrusive.parse('form');
+
+                });
+
+                $dialog = $('<div class="popupWindow" style="overflow:auto"></div>')
+                          .html($pageContent)
+                          .dialog({
+                              draggable: false,
+                              autoOpen: false,
+                              resizable: false,
+                              model: true,
+                              title: 'Popup Dialog',
+                              height: 550,
+                              width: 600,
+                              close: function () {
+                                  $dialog.dialog('destroy').remove();
+                              }
+                          })
+
+                $('.popupWindow').on('submit', '#popupForm', function (e) {
+                    var url = $('#popupForm')[0].action;
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: $('#popupForm').serialize(),
+                        success: function (data) {
+                            if (data.status) {
+                                $dialog.dialog('close');
+                                oTable.ajax.reload();
+                            }
+                        }
+                    })
+
+                    e.preventDefault();
+                })
+                $dialog.dialog('open');
+            }
+            var oTable = $('#tbl_attachmentDocumentsDetails4').DataTable({
+                "ajax": {
+                    "url": '/CadindateProfile/GetCandidateDocumentsJournalsUploadsList',
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                        { "data": "FileName", "autoWidth": true },
+                        { "data": "Size", "autoWidth": true },
+                        {
+                            "data": "FileName", "width": "50px", "render": function (data) {
+                                return ' <a class="btn btn-info" class="popup" href="/CadindateProfile/DownloadJournalsCandidateFile?FileName=' + data + '"><i class="fa fa-download m-r-10">Download</a>';
+                            }
+                        },
+                        {
+                            "data": "FileName", "width": "50px", "render": function (data) {
+                                return '<a class="btn btn-danger" class="popup" href="/CadindateProfile/DeleteJournalsCandidateFile?FileName=' + data + '"><i class="fa fa-trash m-r-10">Delete</a>';
+                            }
+                        }
+                ]
+            })
+            $('.tablecontainer').on('click', 'a.popup', function (e) {
+                e.preventDefault();
+                OpenPopup($(this).attr('href'));
+            })
+            function OpenPopup(pageUrl) {
+                var $pageContent = $('<div/>');
+                $pageContent.load(pageUrl, function () {
+                    $('#popupForm', $pageContent).removeData('validator');
+                    $('#popupForm', $pageContent).removeData('unobtrusiveValidation');
+                    $.validator.unobtrusive.parse('form');
+
+                });
+
+                $dialog = $('<div class="popupWindow" style="overflow:auto"></div>')
+                          .html($pageContent)
+                          .dialog({
+                              draggable: false,
+                              autoOpen: false,
+                              resizable: false,
+                              model: true,
+                              title: 'Popup Dialog',
+                              height: 550,
+                              width: 600,
+                              close: function () {
+                                  $dialog.dialog('destroy').remove();
+                              }
+                          })
+
+                $('.popupWindow').on('submit', '#popupForm', function (e) {
+                    var url = $('#popupForm')[0].action;
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: $('#popupForm').serialize(),
+                        success: function (data) {
+                            if (data.status) {
+                                $dialog.dialog('close');
+                                oTable.ajax.reload();
+                            }
+                        }
+                    })
+
+                    e.preventDefault();
+                })
+                $dialog.dialog('open');
+            }
+        })
+</script>
+
+

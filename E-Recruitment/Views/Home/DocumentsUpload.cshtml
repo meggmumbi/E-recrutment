@@ -1,0 +1,198 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "DocumentsUpload";
+    int FileCounter = 0;
+}
+<div class="card">
+    <div class="card-header text-center" data-background-color="darkgreen">
+        <h5 class="title"><i><strong>  My Documents</strong></i></h5>
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Attach Documents<div class="pull-right"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></div>
+        <div class="clearfix"></div>
+    </div><hr /><br />
+    <div class="panel panel-heading">
+        <h6 class="panel-title"> <strong>Section 1 (Attach Statutory Documents)</strong></h6>
+        <p>Please Attach Relevant documents supporting your Application</p>
+    </div>
+    <div class="panel-body">
+        <div id="eaccuploadfilefeedback" style="display: none" data-dismiss="alert"></div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>1. Upload your EACC Clearance</label>
+                <input type="file" id="EACCfileToUpload" class="form-control" />
+            </div>
+        </div>
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full uploadeaccclearance" id="uploadeaccclearance" name="uploadeaccclearance">Attach</button></li>
+        </ul>
+        <div class="col-md-12">
+            <div id="policeclearancefilefeedback" style="display: none" data-dismiss="alert"></div>
+            <div class="form-group">
+                <label>2. Upload your Police Clearance</label>
+                <input type="file" id="filepoliceclearance" class="form-control" />
+            </div>
+        </div>
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full policeclearance" id="policeclearance" name="policeclearance">Attach</button></li>
+        </ul>
+        <div class="col-md-12">
+            <div id="kracertificatefilefeedback" style="display: none" data-dismiss="alert"></div>
+            <div class="form-group">
+                <label>3. Upload your Tax Compliance Certificate</label>
+                <input type="file" class="form-control" id="filekracertificate">
+            </div>
+        </div>
+        <hr />
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full kracertificate" id="kracertificate" name="kracertificate">Attach</button></li>
+        </ul>
+        <div class="col-md-12">
+            <div id="helbclearancecertificatefeedback" style="display: none" data-dismiss="alert"></div>
+            <div class="form-group">
+                <label>4. Upload your Helb Clearance Certificate</label>
+                <input type="file" class="form-control" id="filehelbclearance">
+            </div>
+        </div>
+        <hr />
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full helbclearance" id="helbclearance" name="helbclearance">Attach</button></li>
+        </ul>
+        <div class="col-md-12">
+            <div id="creditreferencebereaufeedback" style="display: none" data-dismiss="alert"></div>
+            <div class="form-group">
+                <label>5. Upload your Credit Reference Bureau Report</label>
+                <input type="file" class="form-control" id="filecreditreferencebereau">
+            </div>
+        </div>
+        <hr />
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full creditreferencebereau" id="creditreferencebereau" name="creditreferencebereau">Attach</button></li>
+        </ul>
+        <hr />
+        <div class="row">
+            <div id="documentsfeedback" style="display: none" data-dismiss="alert"></div>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable CandidateRegistrationDocuments" id="CandidateRegistrationDocuments">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>File Name</th>
+                                <th>File Size</th>
+                                <th>Download</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           @foreach (FileModel item in Model.UploadedDocuments)
+                           {
+                               FileCounter++;
+                                <tr>
+                                    <td>@FileCounter</td>
+                                    <td>@Html.DisplayFor(modelItem => item.FileName)</td>
+                                    <td>@string.Format("{0:0,0}", item.Size)</td>
+                                    <td>
+                                        <button type="submit" class="btn btn-success pull-left rounded"><i class="fa fa-download"></i> Download</button>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-danger" onclick="DeleteDocuments('@Url.Action("DeleteCandidateFile", "Home", new { FileName = @item.FileName })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                    </td>
+                                </tr>
+
+                            }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel panel-heading" style="background-color:#00c5fb">
+        <h6 class="panel-title"> <strong>Section 2 ( Attach Application Letter, CV)</strong></h6>
+    </div>
+    <div class="panel-body">
+        <div id="applicationletterfeedback" style="display: none" data-dismiss="alert"></div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>7. Upload your Application  Letter</label>
+                <input type="file" class="form-control" id="fileapplicationletter">
+            </div>
+        </div>
+        <hr />
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full applicationletter" id="applicationletter" name="applicationletter">Attach</button></li>
+        </ul>
+        <div class="col-md-12">
+            <div id="cvfeedback" style="display: none" data-dismiss="alert"></div>
+            <div class="form-group">
+                <label>8. Upload your CV/Resume</label>
+                <input type="file" class="form-control" id="filecvfileupload">
+            </div>
+        </div>
+        <hr />
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full uploadcv" id="uploadcv" name="uploadcv">Attach</button></li>
+        </ul>
+        @Html.Action("RegistrationUploadsList", "Home")
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel panel-heading" style="background-color:#00c5fb">
+        <h6 class="panel-title"> <strong>Section 3 (Academic Qualifications,Professional Qualifications)</strong></h6>
+    </div>
+    <div class="panel-body">
+        <div id="academicqualificationsfeedback" style="display: none" data-dismiss="alert"></div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>9. Upload your Academic Qualification</label>
+                <input type="file" class="form-control" id="fileacademicqualifications">
+            </div>
+        </div>
+        <hr />
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full candidateacademicqualifications" id="candidateacademicqualifications" name="candidateacademicqualifications">Attach</button></li>
+        </ul>
+        <div id="proffesionalqualificationsqualificationsfeedback" style="display: none" data-dismiss="alert"></div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>10. Upload your Proffessional Qualification</label>
+                <input type="file" class="form-control" id="fileproffesionalualifications">
+            </div>
+        </div>
+        <hr />
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full proffesionalqualificationsqualifications" id="proffesionalqualificationsqualifications" name="proffesionalqualificationsqualifications">Attach</button></li>
+        </ul>
+        <div id="filetestimonialsfeedback" style="display: none" data-dismiss="alert"></div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>11. Upload your Testimonials</label>
+                <input type="file" class="form-control" id="filetestimonials">
+            </div>
+        </div>
+        <hr />
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full uploadtestimonialsdoc" name="uploadtestimonialsdoc">Attach</button></li>
+        </ul>
+        <div id="fileReferreedfeedback" style="display: none" data-dismiss="alert"></div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>12. Upload your List of Publications in Referreed Journals </label>
+                <input type="file" class="form-control" id="fileReferreed">
+            </div>
+        </div>
+        <hr />
+        <ul class="list-inline pull-left">
+            <li><button type="button" class="btn btn-primary pull-right btn-info-full uploadfileReferreeddoc" name="uploadfileReferreeddoc">Attach</button></li>
+        </ul>
+        @Html.Action("RegistrationUploadsList", "Home")
+    </div>
+</div>
+
+

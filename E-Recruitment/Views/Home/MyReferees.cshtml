@@ -1,0 +1,276 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "MyReferees";
+    int RefereeCounter = 0;
+}
+<div class="card">
+    <div class="card-header text-center" data-background-color="darkgreen">
+        <h5 class="title"><i><strong>  My Refrees</strong></i></h5>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        My Refrees<div class="pull-right"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel-body">
+        <p>Referees (people who have interacted with you professionally) </p>
+        <div id="refereedetailsfeedback" style="display: none" data-dismiss="alert"></div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Referee Type <span class="text-danger">*</span></label>
+                <select data-live-search="true" class="form-control input-circle select2" id="txtrefereetype" name="txtrefereetype">
+                    <option value="">--Choose Referee Type--</option>
+                    <option value="0">Previous Employer</option>
+                    <option value="1">Current Employer</option>
+                    <option value="2">Other Referee</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Title <span class="text-danger">*</span></label>
+                <select data-live-search="true" class="form-control input-circle select2" id="refereetxttitle" name="refereetxttitle">
+                    <option value="0">Prof</option>
+                    <option value="1">Doctor</option>
+                    <option value="2">Mr</option>
+                    <option value="3">Mrs</option>
+                    <option value="4">Miss</option>
+                    <option value="5">Ms</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">SurName <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" id="refereetxtsurname" name="refereetxtsurname">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">First Name <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" id="refereetxtrefereefname" name="refereetxtrefereefname">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Other Names<span class="text-danger">*</span></label>
+                <input class="form-control" type="text" id="refereetxtotherNames" name="refereetxtotherNames">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Contact Person Designation/Title <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" id="refereetxtcontactperson" name="refereetxtcontactperson">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Institution/Organization</label>
+                <input class="form-control" type="text" id="refereeinstitution" name="refereeinstitution">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Email Address</label>
+                <input class="form-control" type="text" id="refereetxtEmailAddress" name="refereetxtEmailAddress">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Phone Number <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" id="refereetxtphonenumber" name="refereetxtphonenumber">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Relationship <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" id="refereetxtRelationships" name="refereetxtRelationships">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Country <span class="text-danger">*</span></label>
+                @Html.Action("RefereeCountries", "Home")
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">The Period from which the Referee have Known You <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" id="refereepreiodofknowing" name="refereepreiodofknowing">
+            </div>
+        </div>
+        <ul class="list-inline pull-right">
+            <li>
+                <button class="btn btn-primary pull-right ladda-button btn_refereeDetails" id="btn_refereeDetails" name="btn_refereeDetails" type="submit" data-style="slide-right" data-background-color="darkgreen">
+                    <span class="ladda-label">
+                        Submit Details
+                    </span>
+                </button>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable" id="tbl_candidate_referee">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Entry No</th>
+                                <th>Name</th>
+                                <th>Email Address</th>
+                                <th>Organization</th>
+                                <th>Relationship</th>
+                                <th>Country</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (RefereesModel academic in Model.Referees)
+                            {
+                                RefereeCounter++;
+                                <tr>
+                                    <td>
+                                        @RefereeCounter
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => academic.EntryNumber)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => academic.FirstName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => academic.EmailAddress)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => academic.institution)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => academic.Relationship)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => academic.Country)
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-success" onclick="EditRefeereeDetails('@academic.FirstName','@academic.EmailAddress','@academic.institution','@academic.Relationship','@academic.Country')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-danger" onclick="DeleteRefree('@Url.Action("DeleteCandidateRefreeDetails", "Home", new { EntryNumber = @academic.EntryNumber })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                    </td>
+                                </tr>
+                            }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="edit_referees" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-content modal-lg" style="width:96%">
+            <div class="modal-header">
+                <Center><h4 class="modal-title">Update Referee Details</h4></Center>
+            </div>
+            <div class="modal-body">
+                <form class="m-b-30">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Referee Type <span class="text-danger">*</span></label>
+                                <select data-live-search="true" class="form-control input-circle select2" id="edittxtrefereetype" name="edittxtrefereetype">
+                                    <option value="">--Choose Referee Type--</option>
+                                    <option value="0">Previous Employer</option>
+                                    <option value="1">Current Employer</option>
+                                    <option value="2">Other Referee</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Title <span class="text-danger">*</span></label>
+                                <select data-live-search="true" class="form-control input-circle select2" id="editrefereetxttitle" name="editrefereetxttitle">
+                                    <option value="0">Prof</option>
+                                    <option value="1">Doctor</option>
+                                    <option value="2">Mr</option>
+                                    <option value="3">Mrs</option>
+                                    <option value="4">Miss</option>
+                                    <option value="5">Ms</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">SurName <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editrefereetxtsurname" name="editrefereetxtsurname">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">First Name <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editrefereetxtrefereefname" name="editrefereetxtrefereefname">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Other Names<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editrefereetxtotherNames" name="editrefereetxtotherNames">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contact Person Designation/Title <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editrefereetxtcontactperson" name="editrefereetxtcontactperson">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Institutionn/Organization</label>
+                                <input class="form-control" type="text" id="editrefereeinstitution" name="editrefereeinstitution">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Email Address</label>
+                                <input class="form-control" type="text" id="editrefereetxtEmailAddress" name="editrefereetxtEmailAddress">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Phone Number <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editrefereetxtphonenumber" name="editrefereetxtphonenumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Relationship <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editrefereetxtRelationships" name="editrefereetxtRelationships">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Country <span class="text-danger">*</span></label>
+                                @Html.Action("RefereeCountries", "Home")
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">The Period from which the Referee have Known You <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="editrefereepreiodofknowing" name="editrefereepreiodofknowing">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

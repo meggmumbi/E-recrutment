@@ -1,0 +1,1359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/eRecruitment" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/eRecruitment" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/eRecruitment" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="FnSubmitApplication">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="jobAppplicationNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnSubmitApplication_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnRegistration">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="idnumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="firstname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="lastname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="middlename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnRegistration_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnResetPassword">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnResetPassword_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResetSendEmail">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ResetSendEmail_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="FnApplicantProfileRegistration">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="prefix" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="surname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="firstname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="othernames" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="gender" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="idnumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="passportnumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="nationality" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="religion" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="dateofbirth" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="countyofresidence" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="countyoforigin" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="ethnicity" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="nhif" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="nssf" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="mobilephonenumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="krapin" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="maritalstatus" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="address" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="disabilitycertificate" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="disabilitysummary" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phonenumber2" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="isdisable" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="postalcodes" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="skillscompetencies" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="managementyears" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="workexperienceyears" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="educationlevel" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicantProfileRegistration_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnAcademicQualifications">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="educationlevel" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="institutionname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="qualificationtitle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="specializationarea" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="attainedscore" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="graduationyear" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="startdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="enddate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnAcademicQualifications_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUpdateAcademicQualifications">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="educationlevel" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="institutionname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="qualificationtitle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="specializationarea" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="attainedscore" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="graduationyear" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="startdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="enddate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUpdateAcademicQualifications_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicationAcademicQualifications">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="jobApplicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="educationlevel" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="institutionname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="qualificationtitle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="specializationarea" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="attainedscore" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="graduationyear" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="startdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="enddate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicationAcademicQualifications_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUpdateApplicationAcademicQualifications">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="jobApplicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="educationlevel" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="institutionname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="qualificationtitle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="specializationarea" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="attainedscore" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="graduationyear" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="startdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="enddate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUpdateApplicationAcademicQualifications_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnProffessionalQualifications">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="educationlevel" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="institutionname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="qualificationtitle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="specializationarea" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="attainedscore" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="graduationyear" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="startdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="enddate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnProffessionalQualifications_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUpdateProffessionalQualifications">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="educationlevel" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="institutionname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="qualificationtitle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="specializationarea" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="attainedscore" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="graduationyear" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="startdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="enddate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUpdateProffessionalQualifications_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicationProffessionalQualifications">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="jobApplicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="proffesionalQualification" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="institutionname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="qualificationtitle" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="specializationarea" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="attainedscore" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="graduationyear" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="startdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="enddate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicationProffessionalQualifications_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnProffessionaBodies">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="professionalbody" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="registrationNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="membershipType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="renewalDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="licensingNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="licenseRenewalDate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnProffessionaBodies_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUpdateProffessionaBodies">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="professionalbody" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="registrationNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="membershipType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="renewalDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="licensingNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="licenseRenewalDate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUpdateProffessionaBodies_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicationProffessionaBodies">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="jobApplicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="professionalbody" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="registrationNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="membershipType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="renewalDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="licensingNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="licenseRenewalDate" type="date" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicationProffessionaBodies_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnWorkExperience">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="employerName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="jobdesignation" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="employmentstartdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="employmentenddate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="termsofservice" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="experienceyears" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dutiesresponsibilities" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnWorkExperience_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUpdateWorkExperience">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="employerName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="jobdesignation" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="employmentstartdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="employmentenddate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="termsofservice" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="experienceyears" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dutiesresponsibilities" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnUpdateWorkExperience_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicationWorkExperience">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="jobApplicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="employerName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="jobdesignation" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="employmentstartdate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="employmentenddate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="termsofservice" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="experienceyears" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dutiesresponsibilities" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicationWorkExperience_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCandidateReferees">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="appplicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="refereetype" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="title" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="surname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="firtsname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="otherNames" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="contactdesignations" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phonenumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="relationship" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="periodknown" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="institution" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCandidateReferees_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicationCandidateReferees">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="appplicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="jobApplicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="refereetype" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="title" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="surname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="firtsname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="otherNames" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="contactdesignations" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phonenumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="relationship" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="periodknown" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="institution" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnApplicationCandidateReferees_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnJobApplication">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vacancyId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnJobApplication_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnPrepopulateApplicantProfile">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="candindateNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vacancyId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnPrepopulateApplicantProfile_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnSubmitProfileApplication">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnSubmitProfileApplication_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnChangeCandidatePassword">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="currentPassword" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newPassword" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="confirmNewPassword" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnChangeCandidatePassword_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendAccountActivationLink">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="emailaddress" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendAccountActivationLink_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteAacademicDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="candidateNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteAacademicDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteJobAcademicDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="candidateNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteJobAcademicDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteProffessionalQualificationDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="candidateNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteProffessionalQualificationDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteProffessionalQualificationBodiesDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="candidateNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteProffessionalQualificationBodiesDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteWorkExperienceDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="candidateNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteWorkExperienceDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteRefereeDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="candidateNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteRefereeDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteJobProffesionalQualificationDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="candidateNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteJobProffesionalQualificationDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteJobProffesionalBodiesDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="candidateNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteJobProffesionalBodiesDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteJobApplicationRefereeDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNumber" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="candidateNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnDeleteJobApplicationRefereeDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCreateCandidateDocumentsLink">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="applicantNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="applicationNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fileName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fileLink" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCreateCandidateDocumentsLink_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="FnSubmitApplication">
+    <part name="parameters" element="tns:FnSubmitApplication" />
+  </message>
+  <message name="FnSubmitApplication_Result">
+    <part name="parameters" element="tns:FnSubmitApplication_Result" />
+  </message>
+  <message name="FnRegistration">
+    <part name="parameters" element="tns:FnRegistration" />
+  </message>
+  <message name="FnRegistration_Result">
+    <part name="parameters" element="tns:FnRegistration_Result" />
+  </message>
+  <message name="FnResetPassword">
+    <part name="parameters" element="tns:FnResetPassword" />
+  </message>
+  <message name="FnResetPassword_Result">
+    <part name="parameters" element="tns:FnResetPassword_Result" />
+  </message>
+  <message name="ResetSendEmail">
+    <part name="parameters" element="tns:ResetSendEmail" />
+  </message>
+  <message name="ResetSendEmail_Result">
+    <part name="parameters" element="tns:ResetSendEmail_Result" />
+  </message>
+  <message name="FnApplicantProfileRegistration">
+    <part name="parameters" element="tns:FnApplicantProfileRegistration" />
+  </message>
+  <message name="FnApplicantProfileRegistration_Result">
+    <part name="parameters" element="tns:FnApplicantProfileRegistration_Result" />
+  </message>
+  <message name="FnAcademicQualifications">
+    <part name="parameters" element="tns:FnAcademicQualifications" />
+  </message>
+  <message name="FnAcademicQualifications_Result">
+    <part name="parameters" element="tns:FnAcademicQualifications_Result" />
+  </message>
+  <message name="FnUpdateAcademicQualifications">
+    <part name="parameters" element="tns:FnUpdateAcademicQualifications" />
+  </message>
+  <message name="FnUpdateAcademicQualifications_Result">
+    <part name="parameters" element="tns:FnUpdateAcademicQualifications_Result" />
+  </message>
+  <message name="FnApplicationAcademicQualifications">
+    <part name="parameters" element="tns:FnApplicationAcademicQualifications" />
+  </message>
+  <message name="FnApplicationAcademicQualifications_Result">
+    <part name="parameters" element="tns:FnApplicationAcademicQualifications_Result" />
+  </message>
+  <message name="FnUpdateApplicationAcademicQualifications">
+    <part name="parameters" element="tns:FnUpdateApplicationAcademicQualifications" />
+  </message>
+  <message name="FnUpdateApplicationAcademicQualifications_Result">
+    <part name="parameters" element="tns:FnUpdateApplicationAcademicQualifications_Result" />
+  </message>
+  <message name="FnProffessionalQualifications">
+    <part name="parameters" element="tns:FnProffessionalQualifications" />
+  </message>
+  <message name="FnProffessionalQualifications_Result">
+    <part name="parameters" element="tns:FnProffessionalQualifications_Result" />
+  </message>
+  <message name="FnUpdateProffessionalQualifications">
+    <part name="parameters" element="tns:FnUpdateProffessionalQualifications" />
+  </message>
+  <message name="FnUpdateProffessionalQualifications_Result">
+    <part name="parameters" element="tns:FnUpdateProffessionalQualifications_Result" />
+  </message>
+  <message name="FnApplicationProffessionalQualifications">
+    <part name="parameters" element="tns:FnApplicationProffessionalQualifications" />
+  </message>
+  <message name="FnApplicationProffessionalQualifications_Result">
+    <part name="parameters" element="tns:FnApplicationProffessionalQualifications_Result" />
+  </message>
+  <message name="FnProffessionaBodies">
+    <part name="parameters" element="tns:FnProffessionaBodies" />
+  </message>
+  <message name="FnProffessionaBodies_Result">
+    <part name="parameters" element="tns:FnProffessionaBodies_Result" />
+  </message>
+  <message name="FnUpdateProffessionaBodies">
+    <part name="parameters" element="tns:FnUpdateProffessionaBodies" />
+  </message>
+  <message name="FnUpdateProffessionaBodies_Result">
+    <part name="parameters" element="tns:FnUpdateProffessionaBodies_Result" />
+  </message>
+  <message name="FnApplicationProffessionaBodies">
+    <part name="parameters" element="tns:FnApplicationProffessionaBodies" />
+  </message>
+  <message name="FnApplicationProffessionaBodies_Result">
+    <part name="parameters" element="tns:FnApplicationProffessionaBodies_Result" />
+  </message>
+  <message name="FnWorkExperience">
+    <part name="parameters" element="tns:FnWorkExperience" />
+  </message>
+  <message name="FnWorkExperience_Result">
+    <part name="parameters" element="tns:FnWorkExperience_Result" />
+  </message>
+  <message name="FnUpdateWorkExperience">
+    <part name="parameters" element="tns:FnUpdateWorkExperience" />
+  </message>
+  <message name="FnUpdateWorkExperience_Result">
+    <part name="parameters" element="tns:FnUpdateWorkExperience_Result" />
+  </message>
+  <message name="FnApplicationWorkExperience">
+    <part name="parameters" element="tns:FnApplicationWorkExperience" />
+  </message>
+  <message name="FnApplicationWorkExperience_Result">
+    <part name="parameters" element="tns:FnApplicationWorkExperience_Result" />
+  </message>
+  <message name="FnCandidateReferees">
+    <part name="parameters" element="tns:FnCandidateReferees" />
+  </message>
+  <message name="FnCandidateReferees_Result">
+    <part name="parameters" element="tns:FnCandidateReferees_Result" />
+  </message>
+  <message name="FnApplicationCandidateReferees">
+    <part name="parameters" element="tns:FnApplicationCandidateReferees" />
+  </message>
+  <message name="FnApplicationCandidateReferees_Result">
+    <part name="parameters" element="tns:FnApplicationCandidateReferees_Result" />
+  </message>
+  <message name="FnJobApplication">
+    <part name="parameters" element="tns:FnJobApplication" />
+  </message>
+  <message name="FnJobApplication_Result">
+    <part name="parameters" element="tns:FnJobApplication_Result" />
+  </message>
+  <message name="FnPrepopulateApplicantProfile">
+    <part name="parameters" element="tns:FnPrepopulateApplicantProfile" />
+  </message>
+  <message name="FnPrepopulateApplicantProfile_Result">
+    <part name="parameters" element="tns:FnPrepopulateApplicantProfile_Result" />
+  </message>
+  <message name="FnSubmitProfileApplication">
+    <part name="parameters" element="tns:FnSubmitProfileApplication" />
+  </message>
+  <message name="FnSubmitProfileApplication_Result">
+    <part name="parameters" element="tns:FnSubmitProfileApplication_Result" />
+  </message>
+  <message name="FnChangeCandidatePassword">
+    <part name="parameters" element="tns:FnChangeCandidatePassword" />
+  </message>
+  <message name="FnChangeCandidatePassword_Result">
+    <part name="parameters" element="tns:FnChangeCandidatePassword_Result" />
+  </message>
+  <message name="SendAccountActivationLink">
+    <part name="parameters" element="tns:SendAccountActivationLink" />
+  </message>
+  <message name="SendAccountActivationLink_Result">
+    <part name="parameters" element="tns:SendAccountActivationLink_Result" />
+  </message>
+  <message name="FnDeleteAacademicDetails">
+    <part name="parameters" element="tns:FnDeleteAacademicDetails" />
+  </message>
+  <message name="FnDeleteAacademicDetails_Result">
+    <part name="parameters" element="tns:FnDeleteAacademicDetails_Result" />
+  </message>
+  <message name="FnDeleteJobAcademicDetails">
+    <part name="parameters" element="tns:FnDeleteJobAcademicDetails" />
+  </message>
+  <message name="FnDeleteJobAcademicDetails_Result">
+    <part name="parameters" element="tns:FnDeleteJobAcademicDetails_Result" />
+  </message>
+  <message name="FnDeleteProffessionalQualificationDetails">
+    <part name="parameters" element="tns:FnDeleteProffessionalQualificationDetails" />
+  </message>
+  <message name="FnDeleteProffessionalQualificationDetails_Result">
+    <part name="parameters" element="tns:FnDeleteProffessionalQualificationDetails_Result" />
+  </message>
+  <message name="FnDeleteProffessionalQualificationBodiesDetails">
+    <part name="parameters" element="tns:FnDeleteProffessionalQualificationBodiesDetails" />
+  </message>
+  <message name="FnDeleteProffessionalQualificationBodiesDetails_Result">
+    <part name="parameters" element="tns:FnDeleteProffessionalQualificationBodiesDetails_Result" />
+  </message>
+  <message name="FnDeleteWorkExperienceDetails">
+    <part name="parameters" element="tns:FnDeleteWorkExperienceDetails" />
+  </message>
+  <message name="FnDeleteWorkExperienceDetails_Result">
+    <part name="parameters" element="tns:FnDeleteWorkExperienceDetails_Result" />
+  </message>
+  <message name="FnDeleteRefereeDetails">
+    <part name="parameters" element="tns:FnDeleteRefereeDetails" />
+  </message>
+  <message name="FnDeleteRefereeDetails_Result">
+    <part name="parameters" element="tns:FnDeleteRefereeDetails_Result" />
+  </message>
+  <message name="FnDeleteJobProffesionalQualificationDetails">
+    <part name="parameters" element="tns:FnDeleteJobProffesionalQualificationDetails" />
+  </message>
+  <message name="FnDeleteJobProffesionalQualificationDetails_Result">
+    <part name="parameters" element="tns:FnDeleteJobProffesionalQualificationDetails_Result" />
+  </message>
+  <message name="FnDeleteJobProffesionalBodiesDetails">
+    <part name="parameters" element="tns:FnDeleteJobProffesionalBodiesDetails" />
+  </message>
+  <message name="FnDeleteJobProffesionalBodiesDetails_Result">
+    <part name="parameters" element="tns:FnDeleteJobProffesionalBodiesDetails_Result" />
+  </message>
+  <message name="FnDeleteJobApplicationRefereeDetails">
+    <part name="parameters" element="tns:FnDeleteJobApplicationRefereeDetails" />
+  </message>
+  <message name="FnDeleteJobApplicationRefereeDetails_Result">
+    <part name="parameters" element="tns:FnDeleteJobApplicationRefereeDetails_Result" />
+  </message>
+  <message name="FnCreateCandidateDocumentsLink">
+    <part name="parameters" element="tns:FnCreateCandidateDocumentsLink" />
+  </message>
+  <message name="FnCreateCandidateDocumentsLink_Result">
+    <part name="parameters" element="tns:FnCreateCandidateDocumentsLink_Result" />
+  </message>
+  <portType name="eRecruitment_Port">
+    <operation name="FnSubmitApplication">
+      <input name="FnSubmitApplication" message="tns:FnSubmitApplication" />
+      <output name="FnSubmitApplication_Result" message="tns:FnSubmitApplication_Result" />
+    </operation>
+    <operation name="FnRegistration">
+      <input name="FnRegistration" message="tns:FnRegistration" />
+      <output name="FnRegistration_Result" message="tns:FnRegistration_Result" />
+    </operation>
+    <operation name="FnResetPassword">
+      <input name="FnResetPassword" message="tns:FnResetPassword" />
+      <output name="FnResetPassword_Result" message="tns:FnResetPassword_Result" />
+    </operation>
+    <operation name="ResetSendEmail">
+      <input name="ResetSendEmail" message="tns:ResetSendEmail" />
+      <output name="ResetSendEmail_Result" message="tns:ResetSendEmail_Result" />
+    </operation>
+    <operation name="FnApplicantProfileRegistration">
+      <input name="FnApplicantProfileRegistration" message="tns:FnApplicantProfileRegistration" />
+      <output name="FnApplicantProfileRegistration_Result" message="tns:FnApplicantProfileRegistration_Result" />
+    </operation>
+    <operation name="FnAcademicQualifications">
+      <input name="FnAcademicQualifications" message="tns:FnAcademicQualifications" />
+      <output name="FnAcademicQualifications_Result" message="tns:FnAcademicQualifications_Result" />
+    </operation>
+    <operation name="FnUpdateAcademicQualifications">
+      <input name="FnUpdateAcademicQualifications" message="tns:FnUpdateAcademicQualifications" />
+      <output name="FnUpdateAcademicQualifications_Result" message="tns:FnUpdateAcademicQualifications_Result" />
+    </operation>
+    <operation name="FnApplicationAcademicQualifications">
+      <input name="FnApplicationAcademicQualifications" message="tns:FnApplicationAcademicQualifications" />
+      <output name="FnApplicationAcademicQualifications_Result" message="tns:FnApplicationAcademicQualifications_Result" />
+    </operation>
+    <operation name="FnUpdateApplicationAcademicQualifications">
+      <input name="FnUpdateApplicationAcademicQualifications" message="tns:FnUpdateApplicationAcademicQualifications" />
+      <output name="FnUpdateApplicationAcademicQualifications_Result" message="tns:FnUpdateApplicationAcademicQualifications_Result" />
+    </operation>
+    <operation name="FnProffessionalQualifications">
+      <input name="FnProffessionalQualifications" message="tns:FnProffessionalQualifications" />
+      <output name="FnProffessionalQualifications_Result" message="tns:FnProffessionalQualifications_Result" />
+    </operation>
+    <operation name="FnUpdateProffessionalQualifications">
+      <input name="FnUpdateProffessionalQualifications" message="tns:FnUpdateProffessionalQualifications" />
+      <output name="FnUpdateProffessionalQualifications_Result" message="tns:FnUpdateProffessionalQualifications_Result" />
+    </operation>
+    <operation name="FnApplicationProffessionalQualifications">
+      <input name="FnApplicationProffessionalQualifications" message="tns:FnApplicationProffessionalQualifications" />
+      <output name="FnApplicationProffessionalQualifications_Result" message="tns:FnApplicationProffessionalQualifications_Result" />
+    </operation>
+    <operation name="FnProffessionaBodies">
+      <input name="FnProffessionaBodies" message="tns:FnProffessionaBodies" />
+      <output name="FnProffessionaBodies_Result" message="tns:FnProffessionaBodies_Result" />
+    </operation>
+    <operation name="FnUpdateProffessionaBodies">
+      <input name="FnUpdateProffessionaBodies" message="tns:FnUpdateProffessionaBodies" />
+      <output name="FnUpdateProffessionaBodies_Result" message="tns:FnUpdateProffessionaBodies_Result" />
+    </operation>
+    <operation name="FnApplicationProffessionaBodies">
+      <input name="FnApplicationProffessionaBodies" message="tns:FnApplicationProffessionaBodies" />
+      <output name="FnApplicationProffessionaBodies_Result" message="tns:FnApplicationProffessionaBodies_Result" />
+    </operation>
+    <operation name="FnWorkExperience">
+      <input name="FnWorkExperience" message="tns:FnWorkExperience" />
+      <output name="FnWorkExperience_Result" message="tns:FnWorkExperience_Result" />
+    </operation>
+    <operation name="FnUpdateWorkExperience">
+      <input name="FnUpdateWorkExperience" message="tns:FnUpdateWorkExperience" />
+      <output name="FnUpdateWorkExperience_Result" message="tns:FnUpdateWorkExperience_Result" />
+    </operation>
+    <operation name="FnApplicationWorkExperience">
+      <input name="FnApplicationWorkExperience" message="tns:FnApplicationWorkExperience" />
+      <output name="FnApplicationWorkExperience_Result" message="tns:FnApplicationWorkExperience_Result" />
+    </operation>
+    <operation name="FnCandidateReferees">
+      <input name="FnCandidateReferees" message="tns:FnCandidateReferees" />
+      <output name="FnCandidateReferees_Result" message="tns:FnCandidateReferees_Result" />
+    </operation>
+    <operation name="FnApplicationCandidateReferees">
+      <input name="FnApplicationCandidateReferees" message="tns:FnApplicationCandidateReferees" />
+      <output name="FnApplicationCandidateReferees_Result" message="tns:FnApplicationCandidateReferees_Result" />
+    </operation>
+    <operation name="FnJobApplication">
+      <input name="FnJobApplication" message="tns:FnJobApplication" />
+      <output name="FnJobApplication_Result" message="tns:FnJobApplication_Result" />
+    </operation>
+    <operation name="FnPrepopulateApplicantProfile">
+      <input name="FnPrepopulateApplicantProfile" message="tns:FnPrepopulateApplicantProfile" />
+      <output name="FnPrepopulateApplicantProfile_Result" message="tns:FnPrepopulateApplicantProfile_Result" />
+    </operation>
+    <operation name="FnSubmitProfileApplication">
+      <input name="FnSubmitProfileApplication" message="tns:FnSubmitProfileApplication" />
+      <output name="FnSubmitProfileApplication_Result" message="tns:FnSubmitProfileApplication_Result" />
+    </operation>
+    <operation name="FnChangeCandidatePassword">
+      <input name="FnChangeCandidatePassword" message="tns:FnChangeCandidatePassword" />
+      <output name="FnChangeCandidatePassword_Result" message="tns:FnChangeCandidatePassword_Result" />
+    </operation>
+    <operation name="SendAccountActivationLink">
+      <input name="SendAccountActivationLink" message="tns:SendAccountActivationLink" />
+      <output name="SendAccountActivationLink_Result" message="tns:SendAccountActivationLink_Result" />
+    </operation>
+    <operation name="FnDeleteAacademicDetails">
+      <input name="FnDeleteAacademicDetails" message="tns:FnDeleteAacademicDetails" />
+      <output name="FnDeleteAacademicDetails_Result" message="tns:FnDeleteAacademicDetails_Result" />
+    </operation>
+    <operation name="FnDeleteJobAcademicDetails">
+      <input name="FnDeleteJobAcademicDetails" message="tns:FnDeleteJobAcademicDetails" />
+      <output name="FnDeleteJobAcademicDetails_Result" message="tns:FnDeleteJobAcademicDetails_Result" />
+    </operation>
+    <operation name="FnDeleteProffessionalQualificationDetails">
+      <input name="FnDeleteProffessionalQualificationDetails" message="tns:FnDeleteProffessionalQualificationDetails" />
+      <output name="FnDeleteProffessionalQualificationDetails_Result" message="tns:FnDeleteProffessionalQualificationDetails_Result" />
+    </operation>
+    <operation name="FnDeleteProffessionalQualificationBodiesDetails">
+      <input name="FnDeleteProffessionalQualificationBodiesDetails" message="tns:FnDeleteProffessionalQualificationBodiesDetails" />
+      <output name="FnDeleteProffessionalQualificationBodiesDetails_Result" message="tns:FnDeleteProffessionalQualificationBodiesDetails_Result" />
+    </operation>
+    <operation name="FnDeleteWorkExperienceDetails">
+      <input name="FnDeleteWorkExperienceDetails" message="tns:FnDeleteWorkExperienceDetails" />
+      <output name="FnDeleteWorkExperienceDetails_Result" message="tns:FnDeleteWorkExperienceDetails_Result" />
+    </operation>
+    <operation name="FnDeleteRefereeDetails">
+      <input name="FnDeleteRefereeDetails" message="tns:FnDeleteRefereeDetails" />
+      <output name="FnDeleteRefereeDetails_Result" message="tns:FnDeleteRefereeDetails_Result" />
+    </operation>
+    <operation name="FnDeleteJobProffesionalQualificationDetails">
+      <input name="FnDeleteJobProffesionalQualificationDetails" message="tns:FnDeleteJobProffesionalQualificationDetails" />
+      <output name="FnDeleteJobProffesionalQualificationDetails_Result" message="tns:FnDeleteJobProffesionalQualificationDetails_Result" />
+    </operation>
+    <operation name="FnDeleteJobProffesionalBodiesDetails">
+      <input name="FnDeleteJobProffesionalBodiesDetails" message="tns:FnDeleteJobProffesionalBodiesDetails" />
+      <output name="FnDeleteJobProffesionalBodiesDetails_Result" message="tns:FnDeleteJobProffesionalBodiesDetails_Result" />
+    </operation>
+    <operation name="FnDeleteJobApplicationRefereeDetails">
+      <input name="FnDeleteJobApplicationRefereeDetails" message="tns:FnDeleteJobApplicationRefereeDetails" />
+      <output name="FnDeleteJobApplicationRefereeDetails_Result" message="tns:FnDeleteJobApplicationRefereeDetails_Result" />
+    </operation>
+    <operation name="FnCreateCandidateDocumentsLink">
+      <input name="FnCreateCandidateDocumentsLink" message="tns:FnCreateCandidateDocumentsLink" />
+      <output name="FnCreateCandidateDocumentsLink_Result" message="tns:FnCreateCandidateDocumentsLink_Result" />
+    </operation>
+  </portType>
+  <binding name="eRecruitment_Binding" type="tns:eRecruitment_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="FnSubmitApplication">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnSubmitApplication" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnSubmitApplication">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnSubmitApplication_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnRegistration">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnRegistration" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnRegistration">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnRegistration_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnResetPassword">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnResetPassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnResetPassword">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnResetPassword_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ResetSendEmail">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:ResetSendEmail" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ResetSendEmail">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ResetSendEmail_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnApplicantProfileRegistration">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnApplicantProfileRegistration" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnApplicantProfileRegistration">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnApplicantProfileRegistration_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnAcademicQualifications">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnAcademicQualifications" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnAcademicQualifications">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnAcademicQualifications_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnUpdateAcademicQualifications">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnUpdateAcademicQualifications" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnUpdateAcademicQualifications">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnUpdateAcademicQualifications_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnApplicationAcademicQualifications">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnApplicationAcademicQualifications" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnApplicationAcademicQualifications">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnApplicationAcademicQualifications_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnUpdateApplicationAcademicQualifications">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnUpdateApplicationAcademicQualifications" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnUpdateApplicationAcademicQualifications">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnUpdateApplicationAcademicQualifications_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnProffessionalQualifications">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnProffessionalQualifications" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnProffessionalQualifications">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnProffessionalQualifications_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnUpdateProffessionalQualifications">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnUpdateProffessionalQualifications" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnUpdateProffessionalQualifications">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnUpdateProffessionalQualifications_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnApplicationProffessionalQualifications">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnApplicationProffessionalQualifications" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnApplicationProffessionalQualifications">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnApplicationProffessionalQualifications_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnProffessionaBodies">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnProffessionaBodies" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnProffessionaBodies">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnProffessionaBodies_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnUpdateProffessionaBodies">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnUpdateProffessionaBodies" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnUpdateProffessionaBodies">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnUpdateProffessionaBodies_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnApplicationProffessionaBodies">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnApplicationProffessionaBodies" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnApplicationProffessionaBodies">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnApplicationProffessionaBodies_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnWorkExperience">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnWorkExperience" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnWorkExperience">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnWorkExperience_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnUpdateWorkExperience">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnUpdateWorkExperience" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnUpdateWorkExperience">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnUpdateWorkExperience_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnApplicationWorkExperience">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnApplicationWorkExperience" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnApplicationWorkExperience">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnApplicationWorkExperience_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnCandidateReferees">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnCandidateReferees" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnCandidateReferees">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnCandidateReferees_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnApplicationCandidateReferees">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnApplicationCandidateReferees" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnApplicationCandidateReferees">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnApplicationCandidateReferees_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnJobApplication">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnJobApplication" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnJobApplication">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnJobApplication_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnPrepopulateApplicantProfile">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnPrepopulateApplicantProfile" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnPrepopulateApplicantProfile">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnPrepopulateApplicantProfile_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnSubmitProfileApplication">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnSubmitProfileApplication" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnSubmitProfileApplication">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnSubmitProfileApplication_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnChangeCandidatePassword">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnChangeCandidatePassword" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnChangeCandidatePassword">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnChangeCandidatePassword_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SendAccountActivationLink">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:SendAccountActivationLink" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SendAccountActivationLink">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SendAccountActivationLink_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDeleteAacademicDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnDeleteAacademicDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDeleteAacademicDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDeleteAacademicDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDeleteJobAcademicDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnDeleteJobAcademicDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDeleteJobAcademicDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDeleteJobAcademicDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDeleteProffessionalQualificationDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnDeleteProffessionalQualificationDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDeleteProffessionalQualificationDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDeleteProffessionalQualificationDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDeleteProffessionalQualificationBodiesDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnDeleteProffessionalQualificationBodiesDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDeleteProffessionalQualificationBodiesDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDeleteProffessionalQualificationBodiesDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDeleteWorkExperienceDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnDeleteWorkExperienceDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDeleteWorkExperienceDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDeleteWorkExperienceDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDeleteRefereeDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnDeleteRefereeDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDeleteRefereeDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDeleteRefereeDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDeleteJobProffesionalQualificationDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnDeleteJobProffesionalQualificationDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDeleteJobProffesionalQualificationDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDeleteJobProffesionalQualificationDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDeleteJobProffesionalBodiesDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnDeleteJobProffesionalBodiesDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDeleteJobProffesionalBodiesDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDeleteJobProffesionalBodiesDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnDeleteJobApplicationRefereeDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnDeleteJobApplicationRefereeDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnDeleteJobApplicationRefereeDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnDeleteJobApplicationRefereeDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnCreateCandidateDocumentsLink">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eRecruitment:FnCreateCandidateDocumentsLink" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnCreateCandidateDocumentsLink">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnCreateCandidateDocumentsLink_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="eRecruitment">
+    <port name="eRecruitment_Port" binding="tns:eRecruitment_Binding">
+      <address location="http://10.0.2.179:8347/KEMRI/WS/KEMRI/Codeunit/eRecruitment" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

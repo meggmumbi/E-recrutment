@@ -1,0 +1,260 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "EducationBackground";
+    int QualificationsCounter = 0;
+}
+    <div class="card">
+        <div class="card-header text-center" data-background-color="darkgreen">
+            <h5 class="title"><i><strong>Education Background</strong></i></h5>
+        </div>
+    </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Academic Qualifications(Starting with highest)<div class="pull-right"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div id="qualificationsfeedback" style="display: none" data-dismiss="alert"></div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Educational Level<span class="text-danger">*</span></label>
+                            <select data-live-search="true" class="form-control input-circle select2" id="txteducationallevel" name="educationallevel">
+                                <option value="">--Choose Educationl Level--</option>
+                                <option value="1">Post Doctorate</option>
+                                <option value="2">PHD</option>
+                                <option value="3">Masters</option>
+                                <option value="4">Degree</option>
+                                <option value="5">Post Graduate Diploma</option>
+                                <option value="6">Diploma</option>
+                                <option value="7">Certificate</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">University/Instituition//College <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="txtinstitution" name="txtinstitution">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Country <span class="text-danger">*</span></label>
+                            @Html.Action("EducationCountries", "Home")
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Academic Qualification Title <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="txtqualificationtitle" name="txtqualificationtitle" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Specialization Area <span class="text-danger">*</span></label>
+                            @Html.Action("AcademicSpecializationAreas", "Home")
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Attained Score <span class="text-danger">*</span></label>
+                            <select data-live-search="true" class="form-control input-circle select2" id="txtattainedscore" name="txtattainedscore">
+                                <option value="">--Choose Attained Score--</option>
+                                <option value="1">First Class Hons</option>
+                                <option value="2">Second Class Upper</option>
+                                <option value="3">Second Class Lower</option>
+                                <option value="4">Destinction</option>
+                                <option value="5">Pass</option>
+                                <option value="6">Credit</option>
+                                <option value="7">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Graduation Year <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="txtgraduationyear" name="txtgraduationyear" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Start Date <span class="text-danger">*</span></label>
+                            <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="academictxtstartdate" name="academictxtstartdate" required></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">End Date <span class="text-danger">*</span></label>
+                            <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="academictxtenddate" name="academictxtenddate" required></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul class="list-inline pull-right">
+                        <li>
+                            <button class="btn btn-primary pull-right ladda-button btn_academicqualifications" id="btn_academicqualifications" name="btn_academicqualifications" type="submit" data-style="slide-right" data-background-color="darkgreen">
+                                <span class="ladda-label">
+                                    Save Academic Qualification
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <div class="panel-body">
+                                <table class="table table-striped custom-table datatable" id="tbl_applicant_qualifications">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Entry No</th>
+                                            <th>Education Level</th>
+                                            <th>Institution</th>
+                                            <th>Country</th>
+                                            <th>Attained Score</th>
+                                            <th>Graduation Year</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (AcademicQualificationModel academic in Model.AcademicsQualification)
+                                        {
+                                            QualificationsCounter++;
+                                            <tr>
+                                                <td>
+                                                    @QualificationsCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.EntryNo)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.EducationLevel)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.Institution)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.Country)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.AttainedScore)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.GraduationYear)
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-success" onclick="EditAcademicDetails('@academic.EntryNo','@academic.EducationLevel','@academic.Institution','@academic.Country','@academic.AttainedScore','@academic.StartDate','@academic.EndDate')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger" onclick="DeleteAcademicQualifications('@Url.Action("DeleteAcademicDetails", "Home", new { EntryNumber = @academic.EntryNo })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+<div id="edit_eacademicQualifications" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-content modal-lg" style="width:96%">
+            <div class="modal-header">
+                <center><h4 class="modal-title">Academic Qualifications</h4></center>
+            </div>
+            <div class="modal-body">
+                <form class="m-b-30">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Educational Level<span class="text-danger">*</span></label>
+                                <select data-live-search="true" class="form-control input-circle select2" id="edittxteducationallevel" name="edittxteducationallevel">
+                                    <option value="">--Choose Educationl Level--</option>
+                                    <option value="0">Post Doctorate</option>
+                                    <option value="1">PHD</option>
+                                    <option value="2">Masters</option>
+                                    <option value="3">Degree</option>
+                                    <option value="4">Post Graduate Diploma</option>
+                                    <option value="5">Diploma</option>
+                                    <option value="6">Certificate</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">University/Instituition//College <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="edittxtinstitution" name="edittxtinstitution">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Country <span class="text-danger">*</span></label>
+                                @Html.Action("EducationCountries", "Home")
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Academic Qualification Title <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="edittxtqualificationtitle" name="edittxtqualificationtitle">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Specialization Area <span class="text-danger">*</span></label>
+                                @Html.Action("AcademicSpecializationAreas", "Home")
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Attained Score <span class="text-danger">*</span></label>
+                                <select data-live-search="true" class="form-control input-circle select2" id="edittxtattainedscore" name="edittxtattainedscore">
+                                    <option value="">--Choose Attained Score--</option>
+                                    <option value="0">First Class Hons</option>
+                                    <option value="1">Second Class Upper</option>
+                                    <option value="2">Second Class Lower</option>
+                                    <option value="3">Destinction</option>
+                                    <option value="4">Pass</option>
+                                    <option value="5">Credit</option>
+                                    <option value="6">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Graduation Year <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="edittxtgraduationyear" name="edittxtgraduationyear">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Start Date <span class="text-danger">*</span></label>
+                                <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="editacademictxtstartdate" name="editacademictxtstartdate"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">End Date <span class="text-danger">*</span></label>
+                                <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="editacademictxtenddate" name="editacademictxtenddate"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

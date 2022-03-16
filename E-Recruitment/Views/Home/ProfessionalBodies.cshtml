@@ -1,0 +1,194 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "ProfessionalBodies";
+    int proffesionalbody = 0;
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Registration and Membership to Professional bodies<div class="pull-right"><i class="fa fa-angle-left"></i>Step 3 of 5<i class="fa fa-angle-right"></i></div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel-body">
+        <div id="proffessionalbodiesfeedback" style="display: none" data-dismiss="alert"></div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Professional Body</label>
+                <input class="form-control" type="text" id="proffessionalbody" name="proffessionalbody">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">MemberShip/Registration No </label>
+                <input class="form-control" type="text" id="registrationNumber" name="registrationNumber">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Membership Type</label>
+                <input class="form-control" type="text" id="txtmebershiptype" name="txtmebershiptype">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Date of Renewal</label>
+                <div class="cal-icon">
+                    <input class="form-control datetimepicker" type="text" id="txtfirstdateofrenewal" name="txtfirstdateofrenewal">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Licensing Number</label>
+                <input class="form-control" type="text" id="licensingnumber" name="licensingnumber">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">Date of Renewal</label>
+                <div class="cal-icon">
+                    <input class="form-control datetimepicker" type="text" id="txtfinaldateofrenewal" name="txtfinaldateofrenewal">
+                </div>
+            </div>
+        </div>
+        <ul class="list-inline pull-right">
+            <li>
+                <button class="btn btn-primary pull-right ladda-button btn_proffessionalBodiesRegistration" id="btn_proffessionalBodiesRegistration" name="btn_proffessionalBodiesRegistration" type="submit" data-style="slide-right" data-background-color="darkgreen">
+                    <span class="ladda-label">
+                        Submit Details
+                    </span>
+                </button>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <div class="panel-body">
+                        <table class="table table-striped custom-table datatable" id="tbl_proffessionalbody">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Proffesional Body</th>
+                                    <th>Registration No.</th>
+                                    <th>Membership Type</th>
+                                    <th>Date of Renewal</th>
+                                    <th>Licensing Number</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ProfessionalBodiesModel academic in Model.ProffessionalBodies)
+                                {
+                                    proffesionalbody++;
+                                    <tr>
+                                        <td>
+                                            @proffesionalbody
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.ProffessionalBody)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.RegistrationNo)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.MembershipType)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.MembershipDateRenewal)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.LicensingNumber)
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-success" onclick="EditProffessionalBodiesDetails('@academic.ProffessionalBody','@academic.RegistrationNo','@academic.MembershipType','@academic.MembershipDateRenewal','@academic.LicensingNumber')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-danger" onclick="DeleteProffessionalBodyQualifications('@academic.ProffessionalBody','@academic.RegistrationNo')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <ul class="list-inline pull-right">
+        <li>
+            <button class="btn btn-primary pull-right ladda-button  next-step" id="btn_personalinformations" name="btn_personalinformations" type="submit" data-style="slide-right" data-background-color="darkgreen">
+                <span class="ladda-label">
+                    Next
+                </span>
+            </button>
+        </li>
+    </ul>
+</div>
+
+<div id="edit_proffessionalbodiesQualifications" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-content modal-lg" style="width:96%">
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Academic Qualifications</h4>
+            </div>
+            <div class="modal-body">
+                <form class="m-b-30">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Professional Body</label>
+                                <input class="form-control" type="text" id="editproffessionalbody" name="editproffessionalbody">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">MemberShip/Registration No </label>
+                                <input class="form-control" type="text" id="editregistrationNumber" name="editregistrationNumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Membership Type</label>
+                                <input class="form-control" type="text" id="edittxtmebershiptype" name="edittxtmebershiptype">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Date of Renewal</label>
+                                <div class="cal-icon">
+                                    <input class="form-control datetimepicker" type="text" id="edittxtfirstdateofrenewal" name="edittxtfirstdateofrenewal">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Licensing Number</label>
+                                <input class="form-control" type="text" id="editlicensingnumber" name="editlicensingnumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Date of Renewal</label>
+                                <div class="cal-icon">
+                                    <input class="form-control datetimepicker" type="text" id="edittxtfinaldateofrenewal" name="edittxtfinaldateofrenewal">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<E_Recruitment.Models.SpecializationAreaModel>
+
+@{
+    Layout = null;
+}
+<select class="form-control select2" id="edittxtspecializationareas" name="edittxtspecializationareas" data_live_search="true">
+    <option value="">--Select Specialization Area---</option>
+    <optgroup label="All Specialization List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Name</option>
+        }
+    </optgroup>
+</select>

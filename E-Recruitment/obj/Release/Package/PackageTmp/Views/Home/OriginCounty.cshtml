@@ -1,0 +1,17 @@
+﻿@model IEnumerable<E_Recruitment.Models.CountiesModel>
+
+@{
+    Layout = null;
+}
+<select class="form-control select2" id="txtcountyofbirth" name="txtcountyofbirth" data_live_search="true">
+    <option value="">--Select County---</option>
+    <optgroup label="All Counties List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Name</option>
+        }
+    </optgroup>
+</select>
+
+
+

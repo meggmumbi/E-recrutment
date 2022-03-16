@@ -1,0 +1,486 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "My Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int QualificationsCounter = 0;
+    int ProffessionalQualificationsCounter = 0;
+    int proffesionalbody = 0;
+    int workexperienceCounter = 0;
+    int RefereeCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="card">
+        <div class="card-header text-center" data-background-color="darkgreen">
+            <h5 class="title"><i>Candidate Profile</i></h5>
+        </div>
+        <div class="card-box">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="profile-view">
+                        <div class="profile-img-wrap">
+                            <div class="profile-img">
+                                <a href="#"><img class="avatar" src="~/assets/img/user.jpg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="profile-basic">
+
+                            @foreach (ApplicantProfileMode profile in Model.CandidateProfile)
+                            {
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="profile-info-left">
+                                        <h3 class="user-name m-t-0 m-b-0">@profile.Full_Names </h3>
+
+                                        <div class="staff-id">ID No:@profile.IDNumber</div>
+                                        <div class="staff-msg"><a href="" class="btn btn-primary">Upload Photo</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <ul class="personal-info">
+                                        <li>
+                                            <span class="title">Phone:</span>
+                                            <span class="text">@profile.Mobile_Phone_No<a href="#"></a></span>
+                                        </li>
+                                        <li>
+                                            <span class="title">Email:</span>
+                                            <span class="text">@profile.Email_Address<a href="#"></a></span>
+                                        </li>
+                                        <li>
+                                            <span class="title">Address :</span>
+                                            <span class="text">@profile.Address</span>
+                                        </li>
+                                        <li>
+                                            <span class="title">Address 2:</span>
+                                            <span class="text">@profile.Address_2</span>
+                                        </li>
+                                        <li>
+                                            <span class="title">Nationality:</span>
+                                            <span class="text">@profile.Nationality</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-box tab-box">
+        <div class="panel-body">
+            <ul class="nav nav-tabs" style="background-color:antiquewhite">
+                <li class="nav-item"><a href="#tab_general" data-toggle="tab" class="nav-link active">Personal Details</a></li>
+                <li class="nav-item"><a href="#tab_education" data-toggle="tab" class="nav-link">Academic Qualifications </a></li>
+                <li class="nav-item"><a href="#tab_Qualfication" data-toggle="tab" class="nav-link">Proffessional Qualifications  </a></li>
+                <li class="nav-item"><a href="#tab_proffessionalbodies" data-toggle="tab" class="nav-link">Proffessional Bodies  </a></li>
+                <li class="nav-item"><a href="#tab_employment" data-toggle="tab" class="nav-link">Employment Details </a></li>
+                <li class="nav-item"><a href="#tab_referees" data-toggle="tab" class="nav-link">Referees </a></li>
+                <li class="nav-item"><a href="#tab_documents" data-toggle="tab" class="nav-link">Attached Documents</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="tab_general">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-heading" style="background-color:#3CB371">
+                        <h5 class="panel-title">Personal Details</h5>
+                    </div><br />
+                            @foreach (ApplicantProfileMode profile in Model.CandidateProfile)
+                            {
+                          <div class="row">
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">ID No/Passport No  <span class="text-danger">*</span></label>
+                                      <input class="form-control" type="text" id="" name="" value="@profile.IDNumber" readonly>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">First Name<span class="text-danger">*</span> </label>
+                                      <input class="form-control" type="text" id="" name="" value="@profile.First_Name" readonly>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Middle Name  <span class="text-danger">*</span></label>
+                                      <input class="form-control" type="text" id="" name="" value="@profile.Middle_Name" readonly>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Last Name<span class="text-danger">*</span></label>
+                                      <input class="form-control" type="text" id="" name="" value="@profile.Last_Name" readonly>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Address <span class="text-danger">*</span></label>
+                                      <input class="form-control" type="text" id="" name="" value="@profile.Address" readonly>
+
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Post Code<span class="text-danger">*</span></label>
+                                      <input class="form-control" type="text" id="" name="" value="@profile.Post_Code" readonly>
+
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Country of Residence: <span class="text-danger">*</span></label>
+                                      <input type="text" class="form-control" id="" name="" value="@profile.County_of_Residence" readonly>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">City/Town: <span class="text-danger">*</span></label>
+                                      <input class="form-control datetimepicker" type="text" id="" name="" value="@profile.City" readonly>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Gender:</label>
+                                    <input class="form-control datetimepicker" type="text" id="" name="" value="@profile.Gender" readonly>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Language:</label>
+                                      <input type="text" class="form-control" id="" name="" value="@profile.Religion" readonly>
+
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Email Address</label>
+                                      <input class="form-control input-circle" id="" name="" value="@profile.Email_Address" readonly>
+
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Phone Number</label>
+                                      <input class="form-control input-circle" id="" name="" value="@profile.Phone_No" readonly>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Date of Birth</label>
+                                      <input class="form-control input-circle" id="" name="" value="@profile.DOB" readonly>
+                                  </div>
+                              </div>
+                          </div>
+                        }
+                </div>
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tab_education">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-heading" style="background-color:#3CB371">
+                        <h4 class="panel-title">Academic Qualifications  Details</h4>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+
+                                <table class="table table-striped custom-table datatable" id="tbl_applicant_qualifications">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Enry No</th>
+                                            <th>Education Level</th>
+                                            <th>Institution</th>
+                                            <th>Country</th>
+                                            <th>Attained Score</th>
+                                            <th>Graduation Year</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (AcademicQualificationModel academic in Model.AcademicsQualification)
+                                        {
+                                            QualificationsCounter++;
+                                            <tr>
+                                                <td>
+                                                    @QualificationsCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.EntryNo)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.EducationLevel)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.Institution)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.Country)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.AttainedScore)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.GraduationYear)
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+
+                                </table>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tab_Qualfication">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-heading" style="background-color:#3CB371">
+                        <h4 class="panel-title">Proffessional Qualfication Details</h4>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped datatable" id="tbl_applicant_ProffessionalQualifications">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Entry No</th>
+                                            <th>Qualification</th>
+                                            <th>Institution</th>
+                                            <th>Country</th>
+                                            <th>Completion Year</th>
+                                            <th>Speciality</th>
+                                            <th>Attained Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (ProffessionalQualificationModel academic in Model.ProffessionalQualification)
+                                        {
+                                            ProffessionalQualificationsCounter++;
+                                            <tr>
+                                                <td>
+                                                    @ProffessionalQualificationsCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.EntryNo)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.ProffessionalQualification)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.Institution)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.Country)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.CompletionYear)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.Speciality)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => academic.AttainedScore)
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tab_proffessionalbodies">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-heading" style="background-color:#3CB371">
+                        <h4 class="panel-title">Registration and Membership to Professional bodies</h4>
+                    </div><br />
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable" id="tbl_proffessionalbody">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Entry No</th>
+                                    <th>Proffesional Body</th>
+                                    <th>Registration No.</th>
+                                    <th>Membership Type</th>
+                                    <th>Date of Renewal</th>
+                                    <th>Licensing Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ProfessionalBodiesModel academic in Model.ProffessionalBodies)
+                                {
+                                    proffesionalbody++;
+                                    <tr>
+                                        <td>
+                                            @proffesionalbody
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.EntryNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.ProffessionalBody)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.RegistrationNo)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.MembershipType)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.MembershipDateRenewal)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.LicensingNumber)
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tab_employment">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-heading" style="background-color:#3CB371">
+                        <h4 class="panel-title">Employment Details</h4>
+                    </div><br />
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable" id="tbl_employment_details">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Entry No</th>
+                                    <th>Employer Name</th>
+                                    <th>Job Title</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Term of Service</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (EmploymentDetailsModel academic in Model.WorkExperience)
+                                {
+                                    workexperienceCounter++;
+                                    <tr>
+                                        <td>
+                                            @workexperienceCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.EntryNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.EmployerName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.Designation)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.StartDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.EndDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.TermsofService)
+                                        </td>
+                                    </tr>
+                                }
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tab_referees">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-heading" style="background-color:#3CB371">
+                        <h4 class="panel-title">Referees</h4>
+                    </div><br />
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable" id="tbl_candidate_referee">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Entry No</th>
+                                    <th>Name</th>
+                                    <th>Email Address</th>
+                                    <th>Organization</th>
+                                    <th>Relationship</th>
+                                    <th>Country</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (RefereesModel academic in Model.Referees)
+                                {
+                                    RefereeCounter++;
+                                    <tr>
+                                        <td>
+                                            @RefereeCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.EntryNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.FirstName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.EmailAddress)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.institution)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.Relationship)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => academic.Country)
+                                        </td>
+                                    </tr>
+                                }
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tab_documents">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-heading" style="background-color:#3CB371">
+                        <h4 class="panel-title">Attached Mandatory Documents</h4>
+                    </div><br />
+                    <div class="table-responsive">
+                        @Html.Action("RegistrationUploadsList", "Home")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

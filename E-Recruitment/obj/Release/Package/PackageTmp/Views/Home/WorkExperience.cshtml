@@ -1,0 +1,210 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "WorkExperience";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int workexperienceCounter = 0;
+}
+<div class="card">
+    <div class="card-header text-center" data-background-color="darkgreen">
+        <h5 class="title"><i><strong>Work Experience</strong></i></h5>
+    </div>
+     </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Work Experience<div class="pull-right"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <div id="employmentdetailsfeedback" style="display: none" data-dismiss="alert"></div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Employer Name <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="txtemployerName" name="txtemployerName">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Job Title/Designation <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="txtjobTitle" name="txtjobTitle">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Employment Start Date</label>
+                        <div class="cal-icon">
+                            <input class="form-control datetimepicker" type="text" id="txtemploymentstartdate" name="txtemploymentstartdate">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Employment End Date <span class="text-danger">*</span></label>
+                        <div class="cal-icon">
+                            <input class="form-control datetimepicker" type="text" id="txtemploymentEndDate" name="txtemploymentEndDate">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Terms of Service<span class="text-danger">*</span></label>
+                        <select data-live-search="true" class="form-control input-circle select2" id="txttermsofservice" name="txttermsofservice">
+                            <option value="">--Choose Terms of Service--</option>
+                            <option value="1">Permanent and Pensionable</option>
+                            <option value="2">Contract</option>
+                            <option value="3">Casual</option>
+                            <option value="4">Internship</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Total Number of Years of relevant work experience for this job <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="txttotalnumber" name="txttotalnumber">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Summarry of Duties And Responsibilities(<strong><i>Not more than 250 words)</i></strong>  <span class="text-danger">*</span></label>
+                        <textarea rows="4" cols="5" class="form-control summernote" placeholder="Enter your message here" id="txtdutiessumarries" name="txtdutiessumarries"></textarea>
+                    </div>
+                </div> <br />
+                <ul class="list-inline pull-right">
+                    <li>
+                        <button class="btn btn-primary pull-right ladda-button btn_employmentDetailsRegistration" id="btn_employmentDetailsRegistration" name="btn_employmentDetailsRegistration" type="submit" data-style="slide-right" data-background-color="darkgreen">
+                            <span class="ladda-label">
+                                Submit Details
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable" id="tbl_employment_details">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Entry No</th>
+                                        <th>Employer Name</th>
+                                        <th>Job Title</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Term of Service</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (EmploymentDetailsModel academic in Model.WorkExperience)
+                                    {
+                                        workexperienceCounter++;
+                                        <tr>
+                                            <td>
+                                                @workexperienceCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => academic.EntryNumber)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => academic.EmployerName)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => academic.Designation)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => academic.StartDate)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => academic.EndDate)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => academic.TermsofService)
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="EditEmploymentDetails('@academic.EmployerName','@academic.Designation','@academic.StartDate','@academic.EndDate','@academic.TermsofService')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger" onclick="DeleteEmployementsDetails('@Url.Action("DeleteCandidateWorkExperienceDetails", "Home", new { EntryNumber = @academic.EntryNumber })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                            </td>
+                                        </tr>
+                                    }
+                            </table>
+                        </div>
+                    </div>
+                </div><br />
+            </div>
+        </div>
+<div id="edit_EmploymentDetails" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-content modal-lg" style="width:96%">
+            <div class="modal-header">
+                <Center><h4 class="modal-title">Update Employment Details</h4></Center>
+            </div>
+            <div class="modal-body">
+                <form class="m-b-30">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Employer Name <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="edittxtemployerName" name="edittxtemployerName">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Job Title/Designation <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="edittxtjobTitle" name="edittxtjobTitle">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Employment Start Date</label>
+                                <div class="cal-icon">
+                                    <input class="form-control datetimepicker" type="text" id="edittxtemploymentstartdate" name="edittxtemploymentstartdate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Employment End Date <span class="text-danger">*</span></label>
+                                <div class="cal-icon">
+                                    <input class="form-control datetimepicker" type="text" id="edittxtemploymentEndDate" name="edittxtemploymentEndDate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Terms of Service<span class="text-danger">*</span></label>
+                                <select data-live-search="true" class="form-control input-circle select2" id="edittxttermsofservice" name="edittxttermsofservice">
+                                    <option value="">--Choose Terms of Service--</option>
+                                    <option value="0">Permanent and Pensionable</option>
+                                    <option value="1">Contract</option>
+                                    <option value="2">Casual</option>
+                                    <option value="3">Internship</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Total Number of Years of relevant work experience for this job <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="edittxttotalnumber" name="edittxttotalnumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Summarry of Duties And Responsibilities(<strong><i>Not more than 250 words)</i></strong>  <span class="text-danger">*</span></label>
+                                <textarea rows="4" cols="5" class="form-control summernote" placeholder="Enter your message here" id="edittxtdutiessumarries" name="edittxtdutiessumarries"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

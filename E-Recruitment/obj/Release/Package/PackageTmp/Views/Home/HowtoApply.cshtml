@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "HowtoApply";
+    Layout = null;
+}
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <title>Jobs - View</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/customFooter.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        @Html.Action("NavigationMenu", "Home")
+    </div>
+        <div class="page-wrapper job-wrapper">
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="job-content job-widget">
+                            <div class="job-desc-title"><h4><strong><u>Quick Guiding Steps</u></strong></h4></div>
+                            <div class="job-description">
+                                <ul class="square-list">
+                                    <li>All first time users of the Online Recruitment and Selection system are required to register by providing ID / Passport Number, Surname, current Email address and a password to access the system.</li>
+                                    <li>To apply for any advertised job or internship opportunities, log into the system using the ID / Passport Number and the Password created in (1) above.</li>
+                                    <li>Applicant MUST ensure that information pertaining to personal details, professional and academic qualifications, experience, membership to professional bodies, referees and any other relevant information is provided before submitting the application. Incomplete applications will not be considered.</li>
+                                    <li>Applicants are advised to print and keep a copy of the Feedback Report (application summary) by clicking on the Report tab or Application Summary link on the Application Menu.</li>
+                                    <li>The Online Recruitment and Selection system allows applicants to amend/revisit their application(s) at any time BEFORE the Advert Closure Date.</li>
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+
+                                <h4>Three easy steps:</h4>
+
+                                <div class="well well-lg bg-gray-light">
+                                    <ol class="round">
+                                        <li class="one">
+                                            <h4>Register</h4>
+                                            Registration allows you to subscribe to notifications when new positions become available, to apply for jobs and track the progress of your pending applications
+                                            <a class="btn btn-sm btn-default with-border" href="/Home/Register">Start here</a>
+                                        </li>
+                                        <li class="two">
+                                            <h4>Complete your profile</h4>
+                                            A complete profile will make it easier to apply for jobs.
+                                            <a class="btn btn-sm btn-default" href="/Home/Login">Update your profile</a>
+                                        </li>
+                                        <li class="three">
+                                            <h4>Apply for a job</h4>
+                                            Find a job that matches your skills and send in your online application.
+                                            <a class="btn btn-sm btn-default" href="/Home/Login">View available job openings</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <hr />
+                                <div class="job-desc-title"><h4><strong><u>Please Note:</u></strong></h4></div>
+                                <div class="job-description">
+                                    <ul class="square-list">
+                                        <li>The online recruitment and selection system allows applicants to amend/revisit their application(s) at any time before the advert closure date</li>
+                                        <li>Section 100(4) of the Public Service Commission Act 2017 provides that a person who gives false or misleading information to the Commission is, on conviction, liable to a fine not exceeding Kshs. 200,000 or to imprisonment for a term not exceeding two years or to both such fine and imprisonment.</li>
+                                        <li>Users who had registered in the previous version of this system are required to register afresh by providing ID/Passport number, surname, email address anda password. In event that you forget the password, click "Forgot Password" link and provide the email you had used to register. A link will be sent to the email address to enable you reset your password.</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        @Html.Action("Footer", "Home")
+    </footer>
+    <script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/app.js"></script>
+</body>
+</html>

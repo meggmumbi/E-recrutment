@@ -1,0 +1,111 @@
+﻿@model E_Recruitment.Models.ProfessionalBodiesModel
+
+@{
+    ViewBag.Title = "DeleteRegistrationMembership";
+}
+<div class="panel panel-body">
+    <div class="card">
+        <div class="card-header text-center" data-background-color="darkgreen">
+            <h5 class="title"><i><strong>Candidate Registration</strong></i></h5>
+        </div>
+        <center><h3>Welcome to the E-Recruitment Portal Job Application Form</h3></center>
+        @using (Html.BeginForm("DeleteRegistrationMembership", "JobApplication", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <div class="form-group">
+                        @if (TempData["error"] != null)
+                        {
+
+                            <div class="alert alert-danger" id="alert-danger" role="alert">
+                                @TempData["error"]
+                            </div>
+
+                        }
+                        else
+                        {
+                            <div class="alert alert-success" id="alert-success" role="alert">
+                                @TempData["success"]
+                            </div>
+                        }
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ProffessionalBody, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ProffessionalBody, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.ProffessionalBody, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.RegistrationNo, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.RegistrationNo, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.RegistrationNo, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.MembershipType, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.MembershipType, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.MembershipType, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.MembershipDateRenewal, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.MembershipDateRenewal, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.MembershipDateRenewal, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.LicensingNumber, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.LicensingNumber, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.LicensingNumber, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.licensingDateRenewal, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.licensingDateRenewal, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.licensingDateRenewal, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <center>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <input type="submit" value="Delete Membership Details" class="btn btn-primary ladda-button" />
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+    <div>
+        @Html.ActionLink("Back to Dashbaord", "Dashbaord", "Home", null, new { @class = "btn btn-warning ladda-button fa fa-arrow-right" })
+    </div>
+
+</div>

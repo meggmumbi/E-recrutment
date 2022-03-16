@@ -1,0 +1,279 @@
+﻿@model E_Recruitment.Models.ProfessionalBodiesModel
+
+@{
+    ViewBag.Title = "RegistrationMembership";
+}
+<div class="panel panel-body">
+    <div class="card">
+        <div class="card-header text-center" data-background-color="darkgreen">
+            <h5 class="title"><i><strong>Candidate Registration</strong></i></h5>
+        </div>
+        <center><h3>Welcome to the E-Recruitment Portal Complete your Profile</h3></center>
+        <div class="row form-group">
+            <div class="col-xs-12">
+                <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                    <li class="disabled">
+                        <a href="/CandidateProfile/Index">
+                            <h4 class="list-group-item-heading">1</h4>
+                            <p class="list-group-item-text">Peronal Details</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/CadindateProfile/AcademicQualifications">
+                            <h4 class="list-group-item-heading">2</h4>
+                            <p class="list-group-item-text">Education</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/CadindateProfile/ProfessionalQualifications">
+                            <h4 class="list-group-item-heading">3</h4>
+                            <p class="list-group-item-text">Qualifications</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/CadindateProfile/RegistrationMembership">
+                            <h4 class="list-group-item-heading">4</h4>
+                            <p class="list-group-item-text">Proffessional Bodies</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/CadindateProfile/EmploymentExperience">
+                            <h4 class="list-group-item-heading">5</h4>
+                            <p class="list-group-item-text">Experience</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/CadindateProfile/Referees">
+                            <h4 class="list-group-item-heading">6</h4>
+                            <p class="list-group-item-text">Referees</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/CadindateProfile/CandidateAttachDocuments">
+                            <h4 class="list-group-item-heading">7</h4>
+                            <p class="list-group-item-text">Attachments</p>
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a href="/CandidateProfile/DeclarationForms">
+                            <h4 class="list-group-item-heading">8</h4>
+                            <p class="list-group-item-text">Declaration</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @using (Html.BeginForm("RegistrationMembership", "CadindateProfile", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Registration and Membership to Professional Bodies<div class="pull-right"><i class="fa fa-angle-left"></i>Step 4 of 8<i class="fa fa-angle-right"></i></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @if (TempData["error"] != null)
+                        {
+
+                            <div class="alert alert-danger" id="alert-danger" role="alert">
+                                @TempData["error"]
+                            </div>
+
+                        }
+                        @if (TempData["success"] != null)
+                        {
+
+                            <div class="alert alert-success" id="alert-success" role="alert">
+                                @TempData["success"]
+                            </div>
+
+                        }
+                        else
+                        {
+
+                        }
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ProffessionalBody, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ProffessionalBody, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.ProffessionalBody, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.RegistrationNo, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.RegistrationNo, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.RegistrationNo, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.MembershipType, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.MembershipType, new { htmlAttributes = new { @class = "form-control floating" } })
+                                    @Html.ValidationMessageFor(model => model.MembershipType, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.MembershipDateRenewal, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.MembershipDateRenewal, new { htmlAttributes = new { @class = "form-control floating datetimepicker" } })
+                                    @Html.ValidationMessageFor(model => model.MembershipDateRenewal, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.LicensingNumber, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.LicensingNumber, new { htmlAttributes = new { @class = "form-control floating " } })
+                                    @Html.ValidationMessageFor(model => model.LicensingNumber, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.licensingDateRenewal, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.licensingDateRenewal, new { htmlAttributes = new { @class = "form-control floating datetimepicker" } })
+                                    @Html.ValidationMessageFor(model => model.licensingDateRenewal, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <center>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <input type="submit" value="Save Membership Details" class="btn btn-primary  btn-lg ladda-button" />
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <div class="panel-body">
+                                    <table id="tbl_proffessionalbodiesqualifications" width="100%" cellspacing="1">
+                                        <thead>
+                                            <tr>
+                                                <th>Proffesional Body</th>
+                                                <th>Registration No.</th>
+                                                <th>Membership Type</th>
+                                                <th>Date of Renewal</th>
+                                                <th>Licensing Number</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            @Html.ActionLink("Previous", "ProfessionalQualifications", "CadindateProfile", null, new { @class = "btn btn-warning ladda-button fa fa-arrow-left" })
+                        </div>
+                        <div class="pull-right">
+                            @Html.ActionLink("Next", "EmploymentExperience", "CadindateProfile", null, new { @class = "btn btn-success ladda-button fa fa-arrow-right" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+    <div>
+        @Html.ActionLink("Back to Dashbaord", "Dashbaord", "Home", null, new { @class = "btn btn-warning ladda-button fa fa-arrow-right" })
+    </div>
+
+</div>
+<script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var oTable = $('#tbl_proffessionalbodiesqualifications').DataTable({
+            "ajax": {
+                "url": '/CadindateProfile/GetProffessionalBodiesQualification',
+                "type": "GET",
+                "datatype": "json"
+            },
+            "columns": [
+                { "data": "ProffessionalBody", "autoWidth": true },
+                { "data": "RegistrationNo", "autoWidth": true },
+                { "data": "MembershipType", "autoWidth": true },
+                { "data": "licensingDateRenewal", "autoWidth": true },
+                { "data": "LicensingNumber", "autoWidth": true },
+                {
+                    "data": "EntryNumber", "width": "50px", "render": function (data) {
+                        return ' <a class="btn btn-info" class="popup" href="/CadindateProfile/EditRegistrationMembership/' + data + '"><i class="fa fa-pencil m-r-10">Edit</a>';
+                    }
+                },
+                {
+                    "data": "EntryNumber", "width": "50px", "render": function (data) {
+                        return '<a class="btn btn-danger" class="popup" href="/CadindateProfile/DeleteRegistrationMembership/' + data + '"><i class="fa fa-trash m-r-10">Delete</a>';
+                    }
+                }
+            ]
+        })
+        $('.tablecontainer').on('click', 'a.popup', function (e) {
+            e.preventDefault();
+            OpenPopup($(this).attr('href'));
+        })
+        function OpenPopup(pageUrl) {
+            var $pageContent = $('<div/>');
+            $pageContent.load(pageUrl, function () {
+                $('#popupForm', $pageContent).removeData('validator');
+                $('#popupForm', $pageContent).removeData('unobtrusiveValidation');
+                $.validator.unobtrusive.parse('form');
+
+            });
+
+            $dialog = $('<div class="popupWindow" style="overflow:auto"></div>')
+                      .html($pageContent)
+                      .dialog({
+                          draggable: false,
+                          autoOpen: false,
+                          resizable: false,
+                          model: true,
+                          title: 'Popup Dialog',
+                          height: 550,
+                          width: 600,
+                          close: function () {
+                              $dialog.dialog('destroy').remove();
+                          }
+                      })
+
+            $('.popupWindow').on('submit', '#popupForm', function (e) {
+                var url = $('#popupForm')[0].action;
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: $('#popupForm').serialize(),
+                    success: function (data) {
+                        if (data.status) {
+                            $dialog.dialog('close');
+                            oTable.ajax.reload();
+                        }
+                    }
+                })
+
+                e.preventDefault();
+            })
+            $dialog.dialog('open');
+        }
+    })
+</script>

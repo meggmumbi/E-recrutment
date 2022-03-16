@@ -1,0 +1,202 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "FAQs";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="Smarthr - Bootstrap Admin Template">
+    <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
+    <meta name="author" content="Dreamguys - Bootstrap Admin Template">
+    <meta name="robots" content="noindex, nofollow">
+    <title>E-Recruitment</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/logo.png">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/customFooter.css">
+    <link rel="stylesheet" href="~/assets/css/Faqs.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        @Html.Action("NavigationMenu", "Home")
+        <div class="page-wrapper job-wrapper">
+            <div class="view-icons">
+                <a href="/Home/JobsGridView" class="grid-view btn btn-link"><i class="fa fa-th"></i></a>
+                <a href="/Home/Index" class="list-view btn btn-link active"><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="content container">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/assets/img/slider3.jpg" alt="Los Angeles" width="1300" height="200">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="alert alert-danger alert-dismissible" role="alert">
+                            <p style="font-family: Impact; font-size: 18pt">KEMRI Invites all Qualified Applicants to Apply for the following Advertised Career Opportunities!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                   
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="tab_1_1" style="width:100%">                            
+                            <div class="row">
+                                <div id="openTenderfeedback" style="display: none;"></div>
+                                <div class="col-md-12">
+
+                                    <section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+                                        <div class="container">
+
+                                            <h2>Frequently Asked Questions </h2>
+                                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+                                                        <h3 class="panel-title">
+                                                            <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                                                Can I change my user name and/or password?
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                                                        <div class="panel-body px-3 mb-4">
+                                                            <p>With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line. Our users fell in love with:</p>
+                                                            <ul>
+                                                                <li>Light speed deployment on the most secure and stable cloud infrastructure available on the market.</li>
+                                                                <li>Scalability – pay for what you need today and add-on options as you grow.</li>
+                                                                <li>All of the bells and whistles of other enterprise CMS options but without the design limitations - this CMS simply lets you realize your creative visions.</li>
+                                                                <li>Amazing support backed by a team of Solodev pros – here when you need them.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+                                                        <h3 class="panel-title">
+                                                            <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                                                What if I have forgotten my username and password?
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                                        <div class="panel-body px-3 mb-4">
+                                                            <p>Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to have a site up and running in no time.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+                                                        <h3 class="panel-title">
+                                                            <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                                                Can I attach a covering letter to a specific application?
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                                        <div class="panel-body px-3 mb-4">
+                                                            <p>Using Amazon AWS technology which is an industry leader for reliability you will be able to experience an uptime in the vicinity of 99.95%.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+                                                        <h3 class="panel-title">
+                                                            <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                                                Do I have to fill out the entire Personal Profile Form?
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                                        <div class="panel-body px-3 mb-4">
+                                                            <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+                                                        <h3 class="panel-title">
+                                                            <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                                                How do I withdraw my application for a vacancy?
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                                        <div class="panel-body px-3 mb-4">
+                                                            <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+                                                        <h3 class="panel-title">
+                                                            <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                                                May I still send my application via regular mail, e-mail or fax?
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                                        <div class="panel-body px-3 mb-4">
+                                                            <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+                                                        <h3 class="panel-title">
+                                                            <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                                                                My personal profile is complete, how do I apply for a vacancy?
+                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                                        <div class="panel-body px-3 mb-4">
+                                                            <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <footer class="site-footer">
+        @Html.Action("Footer", "Home")
+    </footer>
+    <!-- /Main Wrapper -->
+    <script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/app.js"></script>
+</body>
+</html>
+
+

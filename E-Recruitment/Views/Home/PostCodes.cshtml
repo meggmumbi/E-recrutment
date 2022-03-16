@@ -1,0 +1,14 @@
+﻿@model IEnumerable<E_Recruitment.Models.PostCodesModel>
+
+@{
+    Layout = null;
+}
+<select class="form-control select2" id="txtpostcode" name="txtpostcode" data_live_search="true"  onchange="return getSelectedPosta30()">
+    <option value="">--Select Post Code---</option>
+    <optgroup label="All Post Codes List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.City</option>
+        }
+    </optgroup>
+</select>

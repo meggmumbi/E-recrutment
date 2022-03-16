@@ -1,0 +1,602 @@
+﻿@using E_Recruitment.Models
+@model dynamic
+@{
+    ViewBag.Title = "AttachmentApplicationForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int QualificationsCounter = 0;
+    int ProffessionalQualificationsCounter = 0;
+    int proffesionalbody = 0;
+    int workexperienceCounter = 0;
+    int RefereeCounter = 0;
+    int CheckListCounter = 0;
+}
+
+<div class="content">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center card" data-background-color="darkgreen">
+                <h5 class="title"><i>Attachment Application Form</i></h5>
+                <h5>Applicants are Encourage to Update their profile to ensure that all information is correct as required in the Advertised Internship Positions</h5>
+
+            </div>
+        </div>
+    </div>
+    <center><h3>Attachment Application Form</h3></center>
+    <div class="row">
+        <div class="wizard">
+            <div class="wizard-inner">
+                <div class="connecting-line"></div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                            <span class="round-tab">
+                                1
+                            </span>
+                        </a>
+                    </li>
+
+                    <li role="presentation" class="disabled">
+                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                            <span class="round-tab">
+                                2
+                            </span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="disabled">
+                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                            <span class="round-tab">
+                                3
+                            </span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="disabled">
+                        <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Step 4">
+                            <span class="round-tab">
+                                4
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane active" role="tabpanel" id="step1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Personal Details(Please Fill in all the Personal Information before you Proceed)<div class="pull-right"><i class="fa fa-angle-left"></i>Step 1 of 8<i class="fa fa-angle-right"></i></div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div id="feedback" style="display: none" data-dismiss="alert"></div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Title <span class="text-danger">*</span></label>
+                                    <select data-live-search="true" class="form-control input-circle select2" id="prefixtype" name="prefixtype">
+                                        <option value="0">Prof</option>
+                                        <option value="1">Doctor</option>
+                                        <option value="2">Mr</option>
+                                        <option value="3">Mrs</option>
+                                        <option value="4">Miss</option>
+                                        <option value="5">Ms</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">SurName <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="txtsurname" name="txtsurname">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">First Name<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="txtfirstname" name="txtfirstname">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Other Names</label>
+                                    <input class="form-control" type="text" id="txtothernames">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Gender <span class="text-danger">*</span></label>
+                                    <select data-live-search="true" class="form-control input-circle select2" id="txtgender" name="txtgender">
+                                        <option value="0">Male</option>
+                                        <option value="1">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">ID No.<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="txtidnumber" name="txtidnumber">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Passport No</label>
+                                    <input class="form-control" type="text" id="txtpassport" name="txtpassport">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Nationality <span class="text-danger">*</span></label>
+                                    @Html.Action("Countries", "Home")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Religion <span class="text-danger">*</span></label>
+                                    <select data-live-search="true" class="form-control input-circle select2" id="txtreligion" name="txtreligion">
+                                        <option value="">--Select Religion--</option>
+                                        <option value="0">Christianity</option>
+                                        <option value="1">Islam</option>
+                                        <option value="2">Hinduism</option>
+                                        <option value="3">Buddhism</option>
+                                        <option value="4">Folk religion</option>
+                                        <option value="5">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Date of Birth <span class="text-danger">*</span></label>
+                                    <div class="cal-icon"><input class="form-control datetimepicker" style="" type="text" id="txtdob" name="txtdob"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Post Code <span class="text-danger">*</span></label>
+                                    @Html.Action("PostCodes", "Home")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">City\Town<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="txtcity" name="txtcity" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">County of Residence<span class="text-danger">*</span></label>
+                                    @Html.Action("ResidenceCounties", "Home")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">County of Origin(Home County)<span class="text-danger">*</span></label>
+                                    @Html.Action("OriginCounty", "Home")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Ethnicity<span class="text-danger">*</span></label>
+                                    @Html.Action("Ethnicities", "Home")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Mobile Phone Number <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="txtmobilenumber" name="txtmobilenumber">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Alternative Phone Number</label>
+                                    <input class="form-control" type="text" id="txtalternativeNumber" name="txtalternativeNumber">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">KRA Pin <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="txtkrapin" name="txtkrapin">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Marital Status <span class="text-danger">*</span></label>
+                                    <select data-live-search="true" class="form-control input-circle select2" id="maritalstatus" name="maritalstatus">
+                                        <option value="">--Select Marital Status--</option>
+                                        <option value="0">Single</option>
+                                        <option value="1">Married</option>
+                                        <option value="2">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Are you a person Living with Disability <span class="text-danger">*</span></label>
+                                    <select data-live-search="true" class="form-control input-circle select2" id="disabled" name="disabled" onchange="showDiv('hidden_div', this)">
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="hidden_div" style="display:none">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Description of Disability<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="disabilitydescription" name="disabilitydescription">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Disability Certificate No.<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="txtdisabilitycertificateNumber" name="txtdisabilitycertificateNumber">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Postal Address <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="txtpobox" name="txtpobox">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Email Address <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="email" id="emailaddress" name="emailaddress">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Alternative Email Address</label>
+                                    <input class="form-control" type="email" id="txtalternativemail" name="txtalternativemail">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Course<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="email" id="txtalternativemail" name="txtalternativemail">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">University/Institution<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="email" id="txtalternativemail" name="txtalternativemail">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Graduation Year<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="email" id="txtalternativemail" name="txtalternativemail">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Year of Study<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="email" id="txtalternativemail" name="txtalternativemail">
+                                </div>
+                            </div>
+                        </div>
+                        <center>
+                            <button class="btn btn-primary next-step pull-right" type="button" id="nextBtn" name="nextBtn">Next</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="step2">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Referees<div class="pull-right"><i class="fa fa-angle-left"></i>Step 4 of 5<i class="fa fa-angle-right"></i></div>
+                        <div class="clearfix"></div>
+                        <p>Referees (people who have interacted with you professionally) </p>
+                    </div>
+                    <div class="panel-body">
+                        <div id="refereedetailsfeedback" style="display: none" data-dismiss="alert"></div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Title <span class="text-danger">*</span></label>
+                                <select data-live-search="true" class="form-control input-circle select2" id="jobrefereetxttitle" name="jobrefereetxttitle">
+                                    <option value="0">Prof</option>
+                                    <option value="1">Doctor</option>
+                                    <option value="2">Mr</option>
+                                    <option value="3">Mrs</option>
+                                    <option value="4">Miss</option>
+                                    <option value="5">Ms</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">SurName <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="jobrefereetxtsurname" name="jobrefereetxtsurname">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">First Name <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="jobrefereetxtrefereefname" name="jobrefereetxtrefereefname">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Other Names<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="jobrefereetxtotherNames" name="jobrefereetxtotherNames">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contact Person Designation/Title <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="jobrefereetxtcontactperson" name="jobrefereetxtcontactperson">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Institutionn/Organization</label>
+                                <input class="form-control" type="text" id="jobrefereeinstitution" name="jobrefereeinstitution">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Email Address</label>
+                                <input class="form-control" type="text" id="jobrefereetxtEmailAddress" name="jobrefereetxtEmailAddress">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Phone Number <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="jobrefereetxtphonenumber" name="jobrefereetxtphonenumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Relationship <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="jobrefereetxtRelationships" name="jobrefereetxtRelationships">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Country <span class="text-danger">*</span></label>
+                                @Html.Action("RefereeCountries", "Home")
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">The Period from which the Referee have Known You <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="jobrefereepreiodofknowing" name="jobrefereepreiodofknowing">
+                            </div>
+                        </div>
+                        <ul class="list-inline pull-right">
+                            <li>
+                                <button class="btn btn-primary pull-right ladda-button btn_refereeDetails" id="btn_job_refereeDetails" name="btn_job_refereeDetails" type="submit" data-style="slide-right" data-background-color="darkgreen">
+                                    <span class="ladda-label">
+                                        Submit Details
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable" id="tbl_candidate_referee">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Email Address</th>
+                                                <th>Organization</th>
+                                                <th>Relationship</th>
+                                                <th>Country</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (RefereesModel academic in Model.Referees)
+                                            {
+                                                RefereeCounter++;
+                                                <tr>
+                                                    <td>
+                                                        @RefereeCounter
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => academic.FirstName)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => academic.EmailAddress)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => academic.institution)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => academic.Relationship)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => academic.Country)
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-success" onclick=""><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-danger" onclick=""><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                                    </td>
+                                                </tr>
+                                            }
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-inline pull-right">
+                            <li>
+                                <button class="btn btn-primary pull-right ladda-button  next-step" type="submit" data-style="slide-right" data-background-color="darkgreen">
+                                    <span class="ladda-label">
+                                        Next
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="step3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Attach Documents<div class="pull-right"><i class="fa fa-angle-left"></i>Step 5 of 5<i class="fa fa-angle-right"></i></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel panel-heading" style="background-color:#00c5fb">
+                        <h6 class="panel-title"> <strong><u>Section 1 ( Attach Application Letter, CV) </u></strong></h6>
+                    </div>
+                    <div class="panel-body">
+                        <div id="applicationletterfeedback" style="display: none" data-dismiss="alert"></div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>1. Upload your Application  Letter</label>
+                                <input type="file" class="form-control" id="fileapplicationletter">
+                            </div>
+                        </div>
+                        <hr />
+                        <ul class="list-inline pull-left">
+                            <li><button type="button" class="btn btn-primary pull-right btn-info-full applicationletter" id="applicationletter" name="applicationletter">Attach</button></li>
+                        </ul>
+                        <div class="col-md-12">
+                            <div id="cvfeedback" style="display: none" data-dismiss="alert"></div>
+                            <div class="form-group">
+                                <label>2. Upload your CV/Resume</label>
+                                <input type="file" class="form-control" id="cvfileupload">
+                            </div>
+                        </div>
+                        <hr />
+                        <ul class="list-inline pull-left">
+                            <li><button type="button" class="btn btn-primary pull-right btn-info-full uploadcv" id="uploadcv" name="uploadcv">Attach</button></li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>Document Type</th>
+                                                <th>File Name</th>
+                                                <th>Download</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>KRA Pin Certificate</td>
+                                                <td>Obadiahkorir_KRAPIN_Certificate.pnf</td>
+                                                <td>
+                                                    <a class="btn btn-success"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                                </td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel panel-heading" style="background-color:#00c5fb">
+                        <h6 class="panel-title"> <strong><u>Section 2 (Academic Qualifications,Professional Qualifications) </u></strong></h6>
+                    </div>
+                    <div class="panel-body">
+                        <div id="academicqualificationsfeedback" style="display: none" data-dismiss="alert"></div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>3. Upload your Academic Qualification</label>
+                                <input type="file" class="form-control" id="fileacademicqualifications">
+                            </div>
+                        </div>
+                        <hr />
+                        <ul class="list-inline pull-left">
+                            <li><button type="button" class="btn btn-primary pull-right btn-info-full academicqualifications" id="academicqualifications" name="academicqualifications">Attach</button></li>
+                        </ul>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>4. Upload your University/Institution Recommendation letter</label>
+                                <input type="file" class="form-control">
+                            </div>
+                        </div>
+                        <hr />
+                        <ul class="list-inline pull-left">
+                            <li><button type="button" class="btn btn-primary pull-right btn-info-full academicqualifications" id="academicqualifications" name="academicqualifications">Attach</button></li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>Document Type</th>
+                                                <th>File Name</th>
+                                                <th>Download</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>KRA Pin Certificate</td>
+                                                <td>Obadiahkorir_KRAPIN_Certificate.pnf</td>
+                                                <td>
+                                                    <a class="btn btn-success"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                                </td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <ul class="list-inline pull-right">
+                    <li><button type="button" class="btn btn-primary pull-right btn-info-full next-step">Next</button></li>
+                </ul>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="step4">
+                <div class="panel panel-primary">
+                    <div id="submitfeedback" style="display: none" data-dismiss="alert"></div>
+                    <div class="panel-heading">
+                        Declaration Forms<div class="pull-right"><i class="fa fa-angle-left"></i>Step 8 of 8<i class="fa fa-angle-right"></i></div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <h5>I certify that the particulars given on this form are correct and understand that any incorrect/misleading information may lead to disqualification and/or legal action</h5>
+                                <input class="form-check-input " type="checkbox" value="" id="invalidCheck" name="invalidCheck" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-inline pull-right">
+                    <div class="col-xs-8 text-right m-b-30">
+                        <a href="#" onclick="SubmitJobApplication()" class="btn btn-primary pull-right ladda-button"><i class="fa fa-share"></i>Submit Application</a>
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
